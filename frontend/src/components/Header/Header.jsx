@@ -1,14 +1,17 @@
 import "./Header.scss";
 // import HeaderForm from './Pages/HeaderForm/HeaderForm';
 import { Link } from "react-router-dom";
+import Image from "../../assets/Images/luna.jpg";
 
 function Header() {
   return (
     <header>
       <div>
-        <Link to="/home" key="home-link">
-          Home
-        </Link>
+        <div>
+          <Link to="/home" key="home-link">
+            {<img className="logo" src={Image} alt="logo" />}
+          </Link>
+        </div>
 
         <Link to="/van-details" key="van-details-link">
           Van Details
