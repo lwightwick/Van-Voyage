@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { VanImagesData } from "../../data/VanImagesData";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
-import "./ImageSlider.scss";
+import "./VanImageSlider.scss";
 
-const ImageSlider = ({ slides }) => {
+const VanImageSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
@@ -46,4 +46,4 @@ const ImageSlider = ({ slides }) => {
   );
 };
 
-export default ImageSlider;
+export default VanImageSlider;

@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
 import "./VanDetails.scss";
-import VanPhotos from "../../components/VanPhotos/VanPhotos";
-import ImageSlider from "../../components/ImageSlider/ImageSlider";
+import VanImageSlider from "../../components/VanImageSlider/VanImageSlider";
 import { VanImagesData } from "../../data/VanImagesData";
+import Luna from "../../assets/Images/luna.jpg";
+import BehindScenesImageGallery from "../../components/BehindScenesImageGallery/BehindScenesImageGallery";
 
 function VanDetails() {
   return (
@@ -12,7 +12,23 @@ function VanDetails() {
       </section>
       <section>
         <h2>Photo Gallery</h2>
-        <ImageSlider slides={VanImagesData} />
+        <VanImageSlider slides={VanImagesData} />
+      </section>
+
+      <section>
+        <h2>virtual tour</h2>
+        <img src={Luna} alt="" />
+      </section>
+
+      <section>
+        <h2>behind the scenes</h2>
+        <BehindScenesImageGallery />
+        {/* <img src={Luna} alt="" />
+        <img src={Luna} alt="" />
+        <img src={Luna} alt="" />
+        <img src={Luna} alt="" />
+        <img src={Luna} alt="" />
+        <img src={Luna} alt="" /> */}
       </section>
     </main>
   );
