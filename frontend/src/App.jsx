@@ -7,6 +7,7 @@ import PlacesToGo from "./pages/PlacesToGo/PlacesToGo";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Header from "./components/Header/Header";
+import VanPhotos from "./components/VanPhotos/VanPhotos";
 
 function App() {
   return (
@@ -20,9 +21,7 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/places-to-go" component={PlacesToGo} />
         <Route path="/contact" component={Contact} />
-        <Route>
-          <Redirect to="/" />
-        </Route>
+        <Route path="/van-photo-gallery" component={VanPhotos} />
       </Switch>
     </BrowserRouter>
   );
