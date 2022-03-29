@@ -7,28 +7,23 @@ import BehindScenesImageGallery from "../../components/BehindScenesImageGallery/
 function VanDetails() {
   return (
     <main>
-      <section>
-        <h1>The Van</h1>
-      </section>
-      <section>
-        <h2>Photo Gallery</h2>
-        <VanImageSlider slides={VanImagesData} />
-      </section>
-
-      <section>
-        <h2>virtual tour</h2>
-        <img src={Luna} alt="" />
+      <section className="image-slider">
+        <h1 className="image-slider__title">The Van</h1>
+        <h2 className="image-slider__subtitle">Photo Gallery</h2>
+        <VanImageSlider
+          className="image-slider__slider"
+          slides={VanImagesData}
+        />
       </section>
 
-      <section>
-        <h2>behind the scenes</h2>
-        <BehindScenesImageGallery />
-        {/* <img src={Luna} alt="" />
+      <section className="virtual-tour">
+        <h2 className="virtual-tour__subtitle">virtual tour</h2>
         <img src={Luna} alt="" />
-        <img src={Luna} alt="" />
-        <img src={Luna} alt="" />
-        <img src={Luna} alt="" />
-        <img src={Luna} alt="" /> */}
+      </section>
+
+      <section className="image-gallery__container">
+        <h2 className="image-gallery__subtitle">behind the scenes</h2>
+        <BehindScenesImageGallery className="image-gallery__gallery" />
       </section>
     </main>
   );

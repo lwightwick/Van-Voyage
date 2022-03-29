@@ -12,3 +12,10 @@
         @content;
     }
 }
+
+@mixin mobile-h1-text {
+    font-family: $heading-font;
+    font-size: $mobileFont-size-h1;
+    font-weight: $mobileFont-weight-h1;
+    line-height: $mobileFont-lineHeight-h1;
+}

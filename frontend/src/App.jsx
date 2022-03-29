@@ -22,6 +22,9 @@ function App() {
         <Route path="/places-to-go" component={PlacesToGo} />
         <Route path="/contact" component={Contact} />
         <Route path="/van-photo-gallery" component={VanPhotos} />
+        <Route>
+          <Redirect to="/" />
+        </Route>
       </Switch>
     </BrowserRouter>
   );

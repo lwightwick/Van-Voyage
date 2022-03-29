@@ -1,38 +1,41 @@
 import "./Header.scss";
-// import HeaderForm from './Pages/HeaderForm/HeaderForm';
 import { Link } from "react-router-dom";
-import Image from "../../assets/Images/luna.jpg";
+import Logo from "../../assets/Icons/logo.svg";
 
 function Header() {
   return (
-    <header>
-      <div>
+    <header className="header">
+      <section className="header__container">
         <div>
           <Link to="/home" key="home-link">
-            {<img className="logo" src={Image} alt="logo" />}
+            <img className="logo" src={Logo} alt="logo" />
           </Link>
         </div>
 
-        <Link to="/van-details" key="van-details-link">
+        <Link className="header__link" to="/van-details" key="van-details-link">
           Van Details
         </Link>
 
-        <Link to="/about" key="about-link">
+        <Link className="header__link" to="/about" key="about-link">
           about
         </Link>
 
-        <Link to="/booking" key="booking-link">
+        <Link className="header__link" to="/booking" key="booking-link">
           book my Trip
         </Link>
 
-        <Link to="/contact" key="contact-link">
+        <Link className="header__link" to="/contact" key="contact-link">
           contact
         </Link>
 
-        <Link to="/places-to-go" key="places-to-go-link">
+        <Link
+          className="header__link"
+          to="/places-to-go"
+          key="places-to-go-link"
+        >
           Places to Go
         </Link>
-      </div>
+      </section>
     </header>
   );
 }

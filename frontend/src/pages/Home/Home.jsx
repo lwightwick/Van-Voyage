@@ -1,7 +1,8 @@
 import "./Home.scss";
 import { Component, Route, Switch } from "react";
 import Button from "../../components/Button/Button";
-import Image from "../../assets/Images/luna.jpg";
+import BCRoad from "../../assets/Images/bc-road.png";
+import VanFront from "../../assets/Images/van-front.png";
 import Booking from "../Booking/Booking";
 import { Link } from "react-router-dom";
 
@@ -9,16 +10,16 @@ function Home() {
   return (
     <main className="home">
       <section>
-        <h1>Let's go Vamping!</h1>
+        <h1 className="banner__title">Let's go Vamping!</h1>
         <Link to="/booking">
           <Button text={"Book a Trip"} />
         </Link>
-        <img src={Image} alt="" />
+        <img src={BCRoad} alt="" />
       </section>
 
       <section>
         <h2>The Van</h2>
-        <img src={Image} alt="" />
+        <img src={VanFront} alt="" />
         <Link to="/van-details">
           <Button text="Find Out More" />
         </Link>

@@ -1,4 +1,28 @@
+@use "./fonts"as *;
+
 $breakpoints:(small: 320px,
     medium: 768px,
     large: 1280px,
 );
+
+
+$heading-font: "Conformity";
+
+// mobile fonts
+$mobileFont-size-h1: 2rem;
+$mobileFont-size-h2: 12px;
+$mobileFont-size-h3: 13px;
+$mobileFont-size-body: 13px;
+$mobileFont-size-buttons-labels: 13px;
+
+$mobileFont-weight-h1: 600;
+$mobileFont-weight-h2: 600;
+$mobileFont-weight-h3: 600;
+$mobileFont-weight-body: 400;
+$mobileFont-weight-buttons-labels: 600;
+
+$mobileFont-lineHeight-h1: 32px;
+$mobileFont-lineHeight-h2: 20px;
+$mobileFont-lineHeight-h3: 18px;
+$mobileFont-lineHeight-body: 18px;
+$mobileFont-lineHeight-buttons-labels: 20px;

@@ -1,17 +1,13 @@
 .image-gallery {
-    max-width: 1350px;
-    padding: 0px 60px;
-    margin: 50px auto;
+    // max-width: 1350px;
+    // padding: 0px 60px;
+    // margin: 50px auto;
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     gap: 2em;
+    background-color: red;
 
-    &__images {
+    .image-gallery img {
         cursor: pointer;
     }
 }
-
-
-// .image-gallery img {
-//     cursor: pointer;
-// }
