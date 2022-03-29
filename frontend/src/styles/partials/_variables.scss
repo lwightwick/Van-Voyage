@@ -9,6 +9,7 @@ $font-stack: "Comfortaa",
 sans-serif;
 $root-font-size: 1rem;
 $h1-font: "Conformity";
+$h2-font: "Conformity";
 
 // font sizes
 $p1-font-sizes: (null: .9375rem,
@@ -26,14 +27,14 @@ $p3-font-sizes: (null: .6875rem,
     768px: (.75rem, 1.125rem),
 );
 
-$h1-font-sizes: (null: 1.75rem,
-    320px: (1.75rem, 36px),
-    768px: (2rem, 40px),
+$h1-font-sizes: (null: 2.5rem,
+    320px: (2.5rem, 36px),
+    768px: (4rem, 40px),
 );
 
-$h2-font-sizes: (null: 1.25rem,
-    320px: (1.25rem, 1.75rem),
-    768px: (1.5rem, 2rem),
+$h2-font-sizes: (null: 2rem,
+    320px: (2rem, 1.75rem),
+    768px: (3rem, 2rem),
 );
 
 // buttons, labels
