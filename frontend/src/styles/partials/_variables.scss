@@ -1,28 +1,43 @@
-@use "./fonts"as *;
+@use "./typography"as *;
 
 $breakpoints:(small: 320px,
     medium: 768px,
     large: 1280px,
 );
 
+$font-stack: "Comfortaa",
+sans-serif;
+$root-font-size: 1rem;
+$h1-font: "Conformity";
 
-$heading-font: "Conformity";
+// font sizes
+$p1-font-sizes: (null: .9375rem,
+    320px: (.9375rem, 1.625rem),
+    768px: (1rem, 1.75rem),
+);
 
-// mobile fonts
-$mobileFont-size-h1: 2rem;
-$mobileFont-size-h2: 12px;
-$mobileFont-size-h3: 13px;
-$mobileFont-size-body: 13px;
-$mobileFont-size-buttons-labels: 13px;
+$p2-font-sizes: (null: .8125rem,
+    320px: (.8125rem, 1.25rem),
+    768px: (.875rem, 1.375rem),
+);
 
-$mobileFont-weight-h1: 600;
-$mobileFont-weight-h2: 600;
-$mobileFont-weight-h3: 600;
-$mobileFont-weight-body: 400;
-$mobileFont-weight-buttons-labels: 600;
+$p3-font-sizes: (null: .6875rem,
+    320px: (.6875rem, 1rem),
+    768px: (.75rem, 1.125rem),
+);
 
-$mobileFont-lineHeight-h1: 32px;
-$mobileFont-lineHeight-h2: 20px;
-$mobileFont-lineHeight-h3: 18px;
-$mobileFont-lineHeight-body: 18px;
-$mobileFont-lineHeight-buttons-labels: 20px;
+$h1-font-sizes: (null: 1.75rem,
+    320px: (1.75rem, 36px),
+    768px: (2rem, 40px),
+);
+
+$h2-font-sizes: (null: 1.25rem,
+    320px: (1.25rem, 1.75rem),
+    768px: (1.5rem, 2rem),
+);
+
+// buttons, labels
+$h3-font-sizes: (null: .8125rem,
+    320px: (.8125rem, 1.25rem),
+    768px: (.875rem, 1.375rem),
+);

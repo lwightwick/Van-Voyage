@@ -1,9 +1,7 @@
 import "./Home.scss";
-import { Component, Route, Switch } from "react";
 import Button from "../../components/Button/Button";
 import BCRoad from "../../assets/Images/bc-road.png";
 import VanFront from "../../assets/Images/van-front.png";
-import Booking from "../Booking/Booking";
 import { Link } from "react-router-dom";
 
 function Home() {
