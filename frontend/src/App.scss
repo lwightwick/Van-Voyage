@@ -1,20 +1,62 @@
-@use "./styles/partials/reset"as *;
-@import "./styles/partials/variables";
-@import "./styles/partials/mixins";
+@use './styles/partials/globalStyles'as *;
 
 
-
-* {
-    box-sizing: border-box;
-}
-
+html,
 body {
-    background-color: #FAF7F4;
-    font-family: $heading-font;
+    padding: 0;
+    margin: 0;
+    font-family: $font-stack;
+    font-size: $root-font-size;
+    background-color: $color-background-ivory;
+    color: $color-primary-black;
 }
+
 
 h1 {
-    font-family: $heading-font;
-    @include mobile-h1-text;
-    color: red;
+    @include font-size($h1-font-sizes);
+    font-family: $h1-font;
+    color: $color-primary-black;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.625rem;
+    line-height: 1.625rem;
+}
+
+p {
+    line-height: 1.6rem;
+
+
+}
+
+button {
+    // background-color: $color-background-green;
+    background-color: cornflowerblue;
+    font-size: 1.125rem;
+    border-radius: .25rem;
+    border: none;
+    width: 10rem;
+    padding: 0.4rem 1rem;
+    color: $color-primary-white;
+    cursor: pointer;
+
+    &:hover {
+        background-color: red;
+        // cursor: pointer;
+    }
+}
+
+.wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 3rem;
+
+    @include tablet {
+        // padding: 0 $tablet-padding-page-edge;
+    }
+
+    @include desktop {
+        // padding: 0 $desktop-padding-page-edge;
+    }
 }
