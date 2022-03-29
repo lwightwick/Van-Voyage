@@ -1,23 +1,27 @@
 import "./Home.scss";
 import Button from "../../components/Button/Button";
 import BCRoad from "../../assets/Images/bc-road.png";
+import VanSide from "../../assets/Images/van-side.png";
 import VanFront from "../../assets/Images/van-front.png";
+import BannerImage from "../../assets/Images/van-mountains.png";
 import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <main className="home">
-      <section>
+      <section className="banner">
+        <img className="image__banner" src={BannerImage} alt="" />
         <h1 className="banner__title">Let's go Vamping!</h1>
-        <Link to="/booking">
+        <Link className="banner__button" to="/booking">
           <Button text={"Book a Trip"} />
         </Link>
-        <img src={BCRoad} alt="" />
+
+        {/* <img className="image__van-side" src={VanSide} alt="" /> */}
       </section>
 
-      <section>
+      <section className="the-van">
         <h2>The Van</h2>
-        <img src={VanFront} alt="" />
+        <img className="image__van-front" src={VanFront} alt="" />
         <Link to="/van-details">
           <Button text="Find Out More" />
         </Link>

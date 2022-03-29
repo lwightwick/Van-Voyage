@@ -4,16 +4,48 @@
 
 .home {
     // @extend .wrapper;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4rem;
 }
 
-img {
-    width: 20rem;
-}
+.image {
 
+    &__banner {
+        max-width: 100%;
+        position: relative;
+        top: 0;
+        right: 0;
+        padding-left: 1rem;
+
+        @include tablet {
+            width: 100rem;
+        }
+    }
+
+    &__van-side {
+        width: 20rem;
+        max-width: 100%;
+        position: relative;
+        bottom: 200px;
+        left: -10px;
+
+        @include tablet {
+            width: 28rem;
+            bottom: 300px;
+            left: 30px;
+        }
+    }
+
+    &__van-front {
+        width: 20rem;
+        display: flex;
+        justify-content: center;
+        // position: absolute;
+    }
+}
 
 
 .places_to_go {
@@ -28,6 +60,33 @@ img {
 
 .banner {
     &__title {
-        // font-family: $heading-font;
+        max-width: 100%;
+        position: absolute;
+        top: 220px;
+        left: 40px;
+
+        @include tablet {
+            top: 500px;
+            left: 80px;
+        }
     }
+
+    &__button {
+        max-width: 100%;
+        position: absolute;
+        top: 270px;
+        left: 40px;
+
+        @include tablet {
+            top: 560px;
+            left: 80px;
+        }
+    }
+}
+
+.the-van {
+    background-color: #4289DF;
+    width: 100%;
+
+
 }
