@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import BehindTheScenesData from "../../data/BehindTheScenesData.json";
-import "./BehindScenesImageGallery";
+import "./BehindScenesImageGallery.scss";
 import ImageModal from "../ImageModal/ImageModal";
 
 function BehindScenesImageGallery() {
@@ -22,7 +22,7 @@ function BehindScenesImageGallery() {
     }
     const newIndex = currentIndex + 1;
     const newImage = BehindTheScenesData.data.filter((item) => {
-      return BehindTheScenesData.data.indexOf(item) === newImage;
+      return BehindTheScenesData.data.indexOf(item) === newIndex;
     });
     const newItem = newImage[0].image;
     setClickedImage(newItem);
@@ -37,9 +37,9 @@ function BehindScenesImageGallery() {
       setClickedImage(newImage);
       return;
     }
-    const newIndex = currentIndex + 1;
+    const newIndex = currentIndex - 1;
     const newImage = BehindTheScenesData.data.filter((item) => {
-      return BehindTheScenesData.data.indexOf(item) === newImage;
+      return BehindTheScenesData.data.indexOf(item) === newIndex;
     });
     const newItem = newImage[0].image;
     setClickedImage(newItem);
@@ -49,9 +49,8 @@ function BehindScenesImageGallery() {
   return (
     <div className="image-gallery">
       {BehindTheScenesData.data.map((item, index) => (
-        <div key={index}>
+        <div className="image-gallery__images" key={index}>
           <img
-            className="image-gallery__images"
             src={item.image}
             alt={item.title}
             onClick={() => handleClick(item, index)}

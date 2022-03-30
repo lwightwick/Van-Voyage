@@ -18,12 +18,12 @@ function VanDetails() {
 
       <section className="virtual-tour">
         <h2 className="virtual-tour__subtitle">virtual tour</h2>
-        <img src={Luna} alt="" />
+        <img className="virtual-tour__image" src={Luna} alt="" />
       </section>
 
-      <section className="image-gallery__container">
-        <h2 className="image-gallery__subtitle">behind the scenes</h2>
-        <BehindScenesImageGallery className="image-gallery__gallery" />
+      <section>
+        <h2>behind the scenes</h2>
+        <BehindScenesImageGallery />
       </section>
     </main>
   );

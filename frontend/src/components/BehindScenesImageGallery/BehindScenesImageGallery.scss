@@ -1,13 +1,30 @@
-.image-gallery {
-    // max-width: 1350px;
-    // padding: 0px 60px;
-    // margin: 50px auto;
-    display: flex;
-    // flex-wrap: wrap;
-    gap: 2em;
-    background-color: red;
+@use '../../styles/partials/globalStyles'as *;
+@import "../../App.scss";
 
-    .image-gallery img {
+
+.image-gallery {
+    max-width: 1350px;
+    padding: 0px 60px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+
+    &__images {
         cursor: pointer;
+        // width: 8rem;
+        // height: 100%;
+        // gap: 3rem;
+        // object-fit: cover;
+
+
     }
+
+    &__gallery {
+        width: 20rem;
+    }
+}
+
+img {
+    cursor: pointer;
 }

@@ -8,16 +8,17 @@
 }
 
 .virtual-tour {
-    &__subtitle {}
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding-bottom: 5rem;
 
-}
-
-.image-gallery {
-    &__container {
-        // display: flex;
+    &__image {
+        width: 30rem;
     }
 
     &__subtitle {}
 
-    &__gallery {}
 }
