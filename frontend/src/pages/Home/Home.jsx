@@ -11,7 +11,7 @@ function Home() {
     <main className="home">
       <section className="banner">
         <img className="image__banner" src={BannerImage} alt="" />
-        <h1 className="banner__title">Let's go Vamping!</h1>
+        <h1 className="banner__title">Let's go Vanping!</h1>
         <Link className="banner__button" to="/booking">
           <Button text={"Book a Trip"} />
         </Link>

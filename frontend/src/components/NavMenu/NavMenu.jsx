@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./NavMenu.scss";
 import Logo from "../../assets/Icons/logo.svg";
+import styled from "styled-components";
 
 const NavMenu = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <main className="menu-dropdown">
       <section className="header__container">
@@ -15,12 +16,15 @@ const NavMenu = () => {
         </div>
       </section>
 
-      <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+      <section className="hamburger" onClick={() => setIsOpen(!isOpen)}>
         <span />
         <span />
         <span />
-      </div>
-      <section className="menu" isOpen={isOpen}>
+      </section>
+      <section
+        className="menu"
+        style={{ "max-height": isOpen ? "300px" : "0" }}
+      >
         <Link className="menu__link" to="/van-details" key="van-details-link">
           Van Details
         </Link>
@@ -46,3 +50,5 @@ const NavMenu = () => {
 };
 
 export default NavMenu;
+
+// const Hamburger = styled.div``;

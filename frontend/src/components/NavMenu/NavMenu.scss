@@ -20,9 +20,14 @@
 }
 
 .hamburger {
-    display: none;
+    // display: none;
+    display: flex;
     flex-direction: column;
     cursor: pointer;
+
+    @include tablet {
+        display: flex;
+    }
 
     span {
         height: 2px;
@@ -30,19 +35,27 @@
         background: #7b7fda;
         margin-bottom: 4px;
         border-radius: 5px;
+
+        @include tablet {
+            display: none;
+        }
     }
 }
 
 .menu {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    cursor: pointer;
+    max-height: 0;
 
     @include tablet {
         overflow: hidden;
-        flex-direction: column;
+        flex-direction: row;
         transition: max-height 0.3s ease-in;
+
         width: 100%;
     }
 
