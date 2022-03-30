@@ -15,12 +15,10 @@ function Home() {
         <Link className="banner__button" to="/booking">
           <Button text={"Book a Trip"} />
         </Link>
-
-        {/* <img className="image__van-side" src={VanSide} alt="" /> */}
       </section>
 
       <section className="the-van">
-        <h2>The Van</h2>
+        <h2 className="the-van__title">The Van</h2>
         <img className="image__van-front" src={VanFront} alt="" />
         <Link to="/van-details">
           <Button text="Find Out More" />

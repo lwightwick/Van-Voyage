@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
+    gap: rem;
 }
 
 .image {
@@ -42,10 +42,14 @@
     }
 
     &__van-front {
-        width: 20rem;
-        display: flex;
-        justify-content: center;
-        // position: absolute;
+        // width: 20rem;
+        // display: flex;
+        // justify-content: center;
+        // position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
     }
 }
 
@@ -76,7 +80,7 @@
     &__button {
         max-width: 100%;
         position: relative;
-        bottom: 390px;
+        bottom: 370px;
         left: 40px;
 
         @include tablet {
@@ -87,8 +91,17 @@
 }
 
 .the-van {
-    background-color: #4289DF;
+    background-color: $color-background-blue;
     width: 100%;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
 
+    &__title {
+        color: $color-primary-white;
+        // display: flex;
+    }
 
 }

@@ -5,11 +5,11 @@ $breakpoints:(small: 320px,
     large: 1280px,
 );
 
-$font-stack: "Comfortaa",
+$font-stack: "Roboto",
 sans-serif;
 $root-font-size: 1rem;
-$h1-font: "Conformity";
-$h2-font: "Conformity";
+$h1-font: "Bebas";
+$h2-font: "Bebas";
 
 // font sizes
 $p1-font-sizes: (null: .9375rem,
@@ -27,18 +27,18 @@ $p3-font-sizes: (null: .6875rem,
     768px: (.75rem, 1.125rem),
 );
 
-$h1-font-sizes: (null: 2.5rem,
-    320px: (2.5rem, 36px),
+$h1-font-sizes: (null: 5rem,
+    320px: (5rem, 36px),
     768px: (4rem, 40px),
 );
 
-$h2-font-sizes: (null: 2rem,
-    320px: (2rem, 1.75rem),
+$h2-font-sizes: (null: 4rem,
+    320px: (4rem, 1.75rem),
     768px: (3rem, 2rem),
 );
 
 // buttons, labels
-$h3-font-sizes: (null: .8125rem,
-    320px: (.8125rem, 1.25rem),
+$h3-font-sizes: (null: 1rem,
+    320px: (1rem, 1.25rem),
     768px: (.875rem, 1.375rem),
 );
