@@ -1,27 +1,30 @@
 import "./Booking.scss";
 import React, { useState } from "react";
-// import { useForm, Controller } from "react-hook-form";
 import DatePicker from "react-datepicker";
-// import "../../components/DatePicker/DatePicker.scss";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-// function NumberOfDays(startDate, endDate) {
-//   var Days;
+function NumberOfDays(startDate, endDate) {
+  const departureDate = new Date(startDate).getTime();
 
-//   Days = endDate - startDate;
+  const returnDate = new Date(endDate).getTime();
 
-//   return Days;
-// }
+  const dateDifference = (returnDate - departureDate) / 86400000;
+
+  return dateDifference;
+}
 
 function Booking() {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
-  //   const price = 5.99;
+  const [protectionPrice, setProtectionPrice] = useState(150);
 
-  //   let days = NumberOfDays(this.startDate, this.endDate);
-  //   let totalCost = days * price;
-  //   console.log(days);
+  const price = 125.25;
+
+  let days = NumberOfDays(startDate, endDate);
+  console.log(days);
+  let totalCost = days * price;
+  console.log(totalCost);
 
   return (
     <main>
@@ -69,8 +72,20 @@ function Booking() {
           <p>total cost for nights</p>
         </div>
         <div>
-          <p>basic protection package</p>
-          <p>$150.00</p>
+          <label htmlFor="dropOffTime" required>
+            Protection Package
+            <select
+              id="dropOff"
+              name="dropOff"
+              onChange={(event) =>
+                setProtectionPrice(Number(event.target.value))
+              }
+            >
+              <option value="150">Basic ($150.00)</option>
+              <option value="250">Medium ($250.00)</option>
+              <option value="350">Most ($350.00)</option>
+            </select>
+          </label>
         </div>
         <div>
           <p>roadside assistance (required)</p>
@@ -79,7 +94,7 @@ function Booking() {
 
         <div>
           <h3>TOTAL COST</h3>
-          <h3>total cost calculation</h3>
+          <h3>$ {totalCost + 30 + protectionPrice}</h3>
         </div>
       </section>
 
