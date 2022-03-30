@@ -64,7 +64,7 @@
     &__title {
         max-width: 100%;
         position: relative;
-        top: 220px;
+        bottom: 400px;
         left: 40px;
 
         @include tablet {
@@ -76,8 +76,8 @@
     &__button {
         max-width: 100%;
         position: relative;
-        top: 0px;
-        left: 0px;
+        bottom: 390px;
+        left: 40px;
 
         @include tablet {
             top: 560px;

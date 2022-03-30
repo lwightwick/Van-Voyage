@@ -23,7 +23,7 @@ import NavMenu from "../NavMenu/NavMenu";
 
 function Header() {
   return (
-    <main>
+    <main className="header">
       <NavMenu />
     </main>
   );

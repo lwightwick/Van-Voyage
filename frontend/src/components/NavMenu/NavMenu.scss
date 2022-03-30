@@ -3,6 +3,14 @@
 
 
 .menu-dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // margin-left: 0 auto;
     // padding: 1rem 2rem;
     // cursor: pointer;
     // text-align: center;
@@ -19,22 +27,37 @@
 
 }
 
+.header {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // right: 0;
+    }
+}
+
 .hamburger {
-    // display: none;
+    position: relative;
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    // transition: all .5s ease-in-out;
 
     @include tablet {
         display: flex;
     }
 
     span {
-        height: 2px;
-        width: 25px;
-        background: #7b7fda;
+        height: .1875rem;
+        width: 1.5625rem;
+        background: $color-primary-black;
         margin-bottom: 4px;
-        border-radius: 5px;
+        border-radius: 15px;
+        cursor: pointer;
 
         @include tablet {
             display: none;
@@ -42,20 +65,21 @@
     }
 }
 
+
 .menu {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    cursor: pointer;
-    max-height: 0;
+    flex-direction: column;
+    flex-basis: 100%;
+
 
     @include tablet {
         overflow: hidden;
-        flex-direction: row;
+        flex-direction: column;
+        max-height: 300px;
         transition: max-height 0.3s ease-in;
-
         width: 100%;
     }
 
@@ -65,9 +89,11 @@
         cursor: pointer;
         text-align: center;
         text-decoration: none;
-        color: #67bc98;
+        text-transform: capitalize;
+        color: $color-primary-black;
         transition: all 0.3s ease-in;
         font-size: 0.9rem;
+
 
         &:hover {
             color: red;
@@ -78,7 +104,6 @@
 .logo {
     width: 10rem;
     padding: 1rem 0;
-    color: #7b7fda;
     text-decoration: none;
     font-weight: 800;
     font-size: 1.7rem;

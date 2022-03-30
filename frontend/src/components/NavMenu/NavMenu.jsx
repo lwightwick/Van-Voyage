@@ -6,21 +6,23 @@ import styled from "styled-components";
 
 const NavMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  // const [style, setStyle] = useState("hamburger-rotate");
+  // const hamburgerRotate = () => {
+  //   setStyle("hamburger__rotate");
+
   return (
-    <main className="menu-dropdown">
-      <section className="header__container">
-        <div>
-          <Link to="/home" key="home-link">
-            <img className="logo" src={Logo} alt="logo" />
-          </Link>
-        </div>
-      </section>
+    <main className="header__container">
+      <Link className="logo" to="/home" key="home-link">
+        <img src={Logo} alt="logo" />
+      </Link>
 
       <section className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-        <span />
-        <span />
-        <span />
+        <span className="hamburger hamburger__line-1" />
+        <span className="hamburger hamburger__line-2" />
+        <span className="hamburger hamburger__line-3" />
       </section>
+
       <section
         className="menu"
         style={{ "max-height": isOpen ? "300px" : "0" }}
