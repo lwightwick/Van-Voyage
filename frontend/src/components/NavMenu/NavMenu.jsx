@@ -28,23 +28,23 @@ const NavMenu = () => {
         style={{ "max-height": isOpen ? "300px" : "0" }}
       >
         <Link className="menu__link" to="/van-details" key="van-details-link">
-          Van Details
-        </Link>
-
-        <Link className="menu__link" to="/about" key="about-link">
-          about
+          the van
         </Link>
 
         <Link className="menu__link" to="/booking" key="booking-link">
           book my Trip
         </Link>
 
-        <Link className="menu__link" to="/contact" key="contact-link">
-          contact
-        </Link>
-
         <Link className="menu__link" to="/places-to-go" key="places-to-go-link">
           Places to Go
+        </Link>
+
+        <Link className="menu__link" to="/about" key="about-link">
+          about
+        </Link>
+
+        <Link className="menu__link" to="/contact" key="contact-link">
+          contact
         </Link>
       </section>
     </main>

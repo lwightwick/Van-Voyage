@@ -28,6 +28,12 @@
 }
 
 .header {
+
+    @include tablet {
+        padding-top: 1rem;
+
+    }
+
     &__container {
         display: flex;
         justify-content: space-between;
@@ -37,6 +43,10 @@
         // top: 0;
         // left: 0;
         // right: 0;
+
+        @include tablet {
+            flex-wrap: nowrap;
+        }
     }
 }
 
@@ -48,7 +58,7 @@
     // transition: all .5s ease-in-out;
 
     @include tablet {
-        display: flex;
+        display: none;
     }
 
     span {
@@ -76,27 +86,37 @@
 
 
     @include tablet {
-        overflow: hidden;
-        flex-direction: column;
-        max-height: 300px;
-        transition: max-height 0.3s ease-in;
-        width: 100%;
+        justify-content: right;
+        flex-direction: row;
+        gap: 2rem;
+
+        // max-height: 300px;
+        // transition: max-height 0.3s ease-in;
+        // width: 100%;
+        // display: block;
     }
 
 
     &__link {
-        padding: 1rem 2rem;
+        padding: 0 2rem;
         cursor: pointer;
         text-align: center;
         text-decoration: none;
         text-transform: capitalize;
         color: $color-primary-black;
-        transition: all 0.3s ease-in;
+        transition: all 0.2s ease-in;
         font-size: 0.9rem;
 
+        @include tablet {
+            padding: 0;
+
+
+        }
 
         &:hover {
-            color: red;
+            color: $color-background-blue;
+            cursor: pointer;
+
         }
     }
 }
@@ -107,4 +127,9 @@
     text-decoration: none;
     font-weight: 800;
     font-size: 1.7rem;
+
+    @include tablet {
+        display: flex;
+        width: 13rem;
+    }
 }
