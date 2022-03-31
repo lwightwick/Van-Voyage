@@ -28,9 +28,11 @@
 }
 
 .header {
+    padding-top: 1rem;
+
 
     @include tablet {
-        padding-top: 1rem;
+        padding-top: 2rem;
 
     }
 
@@ -83,17 +85,12 @@
     position: relative;
     flex-direction: column;
     flex-basis: 100%;
+    gap: 2rem;
 
 
     @include tablet {
         justify-content: right;
         flex-direction: row;
-        gap: 2rem;
-
-        // max-height: 300px;
-        // transition: max-height 0.3s ease-in;
-        // width: 100%;
-        // display: block;
     }
 
 
@@ -123,7 +120,7 @@
 
 .logo {
     width: 10rem;
-    padding: 1rem 0;
+    // padding: 1rem 0;
     text-decoration: none;
     font-weight: 800;
     font-size: 1.7rem;

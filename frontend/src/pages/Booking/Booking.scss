@@ -1,1 +1,73 @@
+@use '../../styles/partials/globalStyles'as *;
 @import url('https://cdn.syncfusion.com/ej2/material.css');
+@import '../../App.scss';
+
+
+.booking-page {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-background-ivory;
+    position: relative;
+    @extend .wrapper;
+
+    padding-top: 4rem;
+
+
+    &__title {
+        height: 5rem;
+    }
+}
+
+.date-picker {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+
+    &__title {
+        flex: 1;
+    }
+
+    &__calendars {
+        flex: 2;
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__calendar {
+        display: flex;
+        gap: 0.2rem;
+
+    }
+
+    &__subtitle {
+
+        width: 50%;
+    }
+
+
+}
+
+.booking-form {
+    border: solid $color-primary-black 1px;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+.trip-cost {}
+
+.dates-cost {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    // justify-content: space-evenly;
+    width: 100%;
+
+    @include tablet {
+        display: flex;
+    }
+}

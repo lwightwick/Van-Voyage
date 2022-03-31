@@ -24,6 +24,19 @@ h2 {
     color: $color-primary-black;
 }
 
+h3 {
+    @include font-size($h3-font-sizes);
+    font-family: $h3-font;
+    color: $color-primary-black;
+    font-weight: 500;
+}
+
+h4 {
+    @include font-size($h4-font-sizes);
+    font-family: $h4-font;
+    color: $color-primary-black;
+}
+
 p {
     font-family: $font-stack;
     line-height: 1.6rem;

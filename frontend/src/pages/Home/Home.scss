@@ -16,6 +16,8 @@
     text-align: center;
     padding: 1.5rem 0;
 
+    @include tablet {}
+
     &__image {
         max-width: 92%;
         position: relative;
@@ -24,15 +26,19 @@
     }
 
     &__title {
-        // max-width: fit-content;
+
+
         position: absolute;
         bottom: 320px;
         left: 40px;
 
 
         @include tablet {
-            top: 500px;
-            left: 80px;
+
+            top: 150px;
+
+            left: 300px;
+            transform: translate(-50%, -50%);
         }
     }
 
@@ -42,9 +48,13 @@
         bottom: 50px;
         right: 3rem;
 
+
         @include tablet {
-            top: 560px;
+            top: 0;
             left: 80px;
+
+            position: relative;
+            transform: translate(-50%, -50%);
         }
     }
 }

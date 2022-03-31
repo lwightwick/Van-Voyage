@@ -10,6 +10,9 @@ sans-serif;
 $root-font-size: 1rem;
 $h1-font: "Bebas";
 $h2-font: "Bebas";
+$h3-font: "Roboto";
+$h4-font: "Roboto";
+
 
 // font sizes
 $p1-font-sizes: (null: .9375rem,
@@ -29,16 +32,22 @@ $p3-font-sizes: (null: .6875rem,
 
 $h1-font-sizes: (null: 4.5rem,
     320px: (4.5rem, 36px),
-    768px: (4rem, 40px),
+    768px: (5rem, 40px),
 );
 
 $h2-font-sizes: (null: 3.5rem,
     320px: (3.5rem, 1.75rem),
-    768px: (3rem, 2rem),
+    768px: (4rem, 2rem),
 );
 
-// buttons, labels
-$h3-font-sizes: (null: 1rem,
-    320px: (1rem, 1.25rem),
+// buttons
+$h3-font-sizes: (null: 1.2rem,
+    320px: (1.2rem, 1.25rem),
+    768px: (.875rem, 1.375rem),
+);
+
+// labels
+$h4-font-sizes: (null: 0.9rem,
+    320px: (0.9rem, 1.25rem),
     768px: (.875rem, 1.375rem),
 );

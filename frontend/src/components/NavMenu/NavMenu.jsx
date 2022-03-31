@@ -12,7 +12,7 @@ const NavMenu = () => {
   //   setStyle("hamburger__rotate");
 
   return (
-    <main className="header__container">
+    <section className="header__container">
       <Link className="logo" to="/home" key="home-link">
         <img src={Logo} alt="logo" />
       </Link>
@@ -47,7 +47,7 @@ const NavMenu = () => {
           contact
         </Link>
       </section>
-    </main>
+    </section>
   );
 };
 
