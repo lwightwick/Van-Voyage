@@ -32,7 +32,6 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    // justify-content: space-evenly;
     width: 100%;
 
     @include tablet {
@@ -41,7 +40,7 @@
 }
 
 
-.section {
+.form-section {
     display: flex;
     justify-content: space-evenly;
     border-bottom: solid 1px $color-primary-black;
@@ -51,33 +50,27 @@
         border-bottom: none;
     }
 
-    &__trip-dates {}
-
-
 
     &__title {
         flex: 1;
         text-transform: capitalize;
     }
 
-    &__calendars {
+    &__fields-container {
         flex: 2;
         gap: 2rem;
         display: flex;
         flex-direction: column;
     }
 
-    &__calendar {
+    &__field {
         display: flex;
         justify-content: space-between;
 
     }
 
-    &__subtitle {
-
+    &__label {
         display: flex;
-
-        margin-right: auto;
     }
 }
 

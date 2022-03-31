@@ -1,6 +1,7 @@
 import "./Booking.scss";
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
+import Button from "../../components/Button/Button";
 
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -31,12 +32,12 @@ function Booking() {
       <h1 className="booking-page__title">Booking page</h1>
       <div className="booking-form">
         <div className="dates-and-cost">
-          <section className="section">
-            <h3 className="section__title">Trip Dates</h3>
+          <section className="form-section">
+            <h3 className="form-section__title">Trip Dates</h3>
 
-            <div className="section__calendars">
-              <div className="section__calendar">
-                <h4 className="section__subtitle">Departure Date</h4>
+            <div className="form-section__fields-container">
+              <div className="form-section__field">
+                <h4 className="form-section__label">Departure Date</h4>
                 <div>
                   <DatePicker
                     selected={startDate}
@@ -54,8 +55,8 @@ function Booking() {
                 </div>
               </div>
 
-              <div className="section__calendar">
-                <h4 className="section__subtitle">Return Date</h4>
+              <div className="form-section__field">
+                <h4 className="form-section__label">Return Date</h4>
                 <div>
                   <DatePicker
                     // className="section__end-date-picker"
@@ -77,34 +78,34 @@ function Booking() {
             </div>
           </section>
 
-          <section className="section">
-            <h3 className="section__title">Selected Van</h3>
+          <section className="form-section">
+            <h3 className="form-section__title">Selected Van</h3>
 
-            {/* <div className="section__calendars">
-              <h4 className="section__calendar">
+            {/* <div className="form-section__fields-container">
+              <h4 className="form-section__field">
                 date range in here from date picker
               </h4>
-              <h4 className="section__calendar">number of nights calculated</h4>
-              <h4 className="section__calendar">total cost for nights</h4>
+              <h4 className="form-section__field">number of nights calculated</h4>
+              <h4 className="form-section__field">total cost for nights</h4>
             </div> */}
-            <div className="section__calendars">
-              <div className="section__calendar">
-                <h4 className="section__subtitle">number of nights</h4>
+            <div className="form-section__fields-container">
+              <div className="form-section__field">
+                <h4 className="form-section__label">number of nights</h4>
                 <h4>{days}</h4>
               </div>
 
-              <div className="section__calendar">
-                <h4 className="section__subtitle">van cost</h4>
+              <div className="form-section__field">
+                <h4 className="form-section__label">van cost</h4>
                 <h4>${totalCost}</h4>
               </div>
 
               <div>
                 <label
-                  className="section__calendar"
+                  className="form-section__field"
                   htmlFor="dropOffTime"
                   required
                 >
-                  <h4 className="section__subtitle">
+                  <h4 className="form-section__label">
                     Protection Package (required)
                   </h4>
                   <select
@@ -121,54 +122,54 @@ function Booking() {
                 </label>
               </div>
 
-              <div className="section__calendar">
-                <h4 className="section__subtitle">
+              <div className="form-section__field">
+                <h4 className="form-section__label">
                   roadside assistance (required)
                 </h4>
                 <h4>$30.00</h4>
               </div>
 
-              <div className="section__calendar">
-                <h4 className="section__subtitle">TOTAL COST</h4>
+              <div className="form-section__field">
+                <h4 className="form-section__label">TOTAL COST</h4>
                 <h4>${totalCost + 30 + protectionPrice}</h4>
               </div>
             </div>
           </section>
         </div>
 
-        <section className="section section--no-divider">
-          <h3 className="section__title">Personal info</h3>
-          <form className="section__calendars">
+        <section className="form-section form-section--no-divider">
+          <h3 className="form-section__title">Personal info</h3>
+          <form className="form-section__fields-container">
             <div>
-              <label className="section__calendar" htmlFor="firstName">
+              <label className="form-section__field" htmlFor="firstName">
                 First Name
                 <input type="text" name="firstName" required></input>
               </label>
             </div>
 
             <div>
-              <label className="section__calendar" htmlFor="lastName">
+              <label className="form-section__field" htmlFor="lastName">
                 Last Name
                 <input type="text" name="lastName" required></input>
               </label>
             </div>
 
             <div>
-              <label className="section__calendar" htmlFor="email">
+              <label className="form-section__field" htmlFor="email">
                 Email
                 <input type="text" name="email" required></input>
               </label>
             </div>
 
             <div>
-              <label className="section__calendar" htmlFor="phone">
+              <label className="form-section__field" htmlFor="phone">
                 Phone
                 <input type="text" name="phone" required></input>
               </label>
             </div>
 
             <div>
-              <label className="section__subtitle over25" htmlFor="over25">
+              <label className="form-section__label over25" htmlFor="over25">
                 I certify that I am over the age of 25 at the time of my trip &
                 I have a vaild drivers license
                 <input
@@ -181,7 +182,7 @@ function Booking() {
             </div>
 
             <div>
-              <label className="section__calendar" htmlFor="driversLicense">
+              <label className="form-section__field" htmlFor="driversLicense">
                 Drivers License Number
                 <input type="text" name="driversLicense" required></input>
               </label>
@@ -189,7 +190,7 @@ function Booking() {
 
             <div>
               <label
-                className="section__calendar"
+                className="form-section__field"
                 htmlFor="pickUpTime"
                 required
               >
@@ -211,7 +212,7 @@ function Booking() {
 
             <div>
               <label
-                className="section__calendar"
+                className="form-section__field"
                 htmlFor="dropOffTime"
                 required
               >
@@ -231,7 +232,7 @@ function Booking() {
               </label>
             </div>
 
-            <button className="section__calendar">Submit</button>
+            <Button text={"submit"} />
           </form>
         </section>
       </div>
