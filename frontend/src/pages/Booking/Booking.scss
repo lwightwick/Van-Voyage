@@ -18,37 +18,6 @@
     }
 }
 
-.section {
-    display: flex;
-    // gap: 1rem;
-    justify-content: space-evenly;
-    border-bottom: solid 1px $color-primary-black;
-    padding-bottom: 1.5rem;
-
-    &__title {
-        flex: 1;
-    }
-
-    &__calendars {
-        flex: 2;
-        gap: 2rem;
-        // justify-content: space-between;
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__calendar {
-        display: flex;
-        // gap: 0.2rem;
-        justify-content: space-between;
-    }
-
-    &__subtitle {
-
-        width: 130%;
-    }
-}
-
 .booking-form {
     border: solid $color-primary-black 1px;
     border-radius: 0.5rem;
@@ -59,13 +28,7 @@
     align-items: center;
 }
 
-.trip-cost {
-    display: flex;
-    gap: 1rem;
-    justify-content: space-evenly;
-}
-
-.dates-cost {
+.dates-and-cost {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -75,4 +38,49 @@
     @include tablet {
         display: flex;
     }
+}
+
+
+.section {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: solid 1px $color-primary-black;
+    padding-bottom: 1.5rem;
+
+    &--no-divider {
+        border-bottom: none;
+    }
+
+    &__trip-dates {}
+
+
+
+    &__title {
+        flex: 1;
+        text-transform: capitalize;
+    }
+
+    &__calendars {
+        flex: 2;
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__calendar {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__subtitle {
+
+        display: flex;
+
+        margin-right: auto;
+    }
+}
+
+.over25 {
+    font-size: smaller;
 }

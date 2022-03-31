@@ -30,45 +30,49 @@ function Booking() {
     <main className="booking-page">
       <h1 className="booking-page__title">Booking page</h1>
       <div className="booking-form">
-        <div className="dates-cost">
+        <div className="dates-and-cost">
           <section className="section">
             <h3 className="section__title">Trip Dates</h3>
 
             <div className="section__calendars">
               <div className="section__calendar">
                 <h4 className="section__subtitle">Departure Date</h4>
-                <DatePicker
-                  className="section__start-date-picker"
-                  selected={startDate}
-                  onChange={(date) => setStartDate(date)}
-                  selectsStart
-                  startDate={startDate}
-                  endDate={endDate}
-                  placeholderText="Select departure date"
-                  monthsShown={2}
-                >
-                  <div style={{ color: "#4289DF" }}>
-                    Don't forget to check the weather!
-                  </div>
-                </DatePicker>
+                <div>
+                  <DatePicker
+                    selected={startDate}
+                    onChange={(date) => setStartDate(date)}
+                    selectsStart
+                    startDate={startDate}
+                    endDate={endDate}
+                    placeholderText="Select departure date"
+                    monthsShown={2}
+                  >
+                    <div style={{ color: "#4289DF" }}>
+                      Don't forget to check the weather!
+                    </div>
+                  </DatePicker>
+                </div>
               </div>
+
               <div className="section__calendar">
                 <h4 className="section__subtitle">Return Date</h4>
-                <DatePicker
-                  className="section__end-date-picker"
-                  selected={endDate}
-                  onChange={(date) => setEndDate(date)}
-                  selectsEnd
-                  startDate={startDate}
-                  endDate={endDate}
-                  minDate={startDate}
-                  placeholderText="Select return date"
-                  monthsShown={2}
-                >
-                  <div style={{ color: "#4289DF" }}>
-                    Don't forget to check the weather!
-                  </div>
-                </DatePicker>
+                <div>
+                  <DatePicker
+                    // className="section__end-date-picker"
+                    selected={endDate}
+                    onChange={(date) => setEndDate(date)}
+                    selectsEnd
+                    startDate={startDate}
+                    endDate={endDate}
+                    minDate={startDate}
+                    placeholderText="Select return date"
+                    monthsShown={2}
+                  >
+                    <div style={{ color: "#4289DF" }}>
+                      Don't forget to check the weather!
+                    </div>
+                  </DatePicker>
+                </div>
               </div>
             </div>
           </section>
@@ -132,38 +136,39 @@ function Booking() {
           </section>
         </div>
 
-        <section>
-          <form>
+        <section className="section section--no-divider">
+          <h3 className="section__title">Personal info</h3>
+          <form className="section__calendars">
             <div>
-              <label htmlFor="firstName">
+              <label className="section__calendar" htmlFor="firstName">
                 First Name
                 <input type="text" name="firstName" required></input>
               </label>
             </div>
 
             <div>
-              <label htmlFor="lastName">
+              <label className="section__calendar" htmlFor="lastName">
                 Last Name
                 <input type="text" name="lastName" required></input>
               </label>
             </div>
 
             <div>
-              <label htmlFor="email">
+              <label className="section__calendar" htmlFor="email">
                 Email
                 <input type="text" name="email" required></input>
               </label>
             </div>
 
             <div>
-              <label htmlFor="phone">
+              <label className="section__calendar" htmlFor="phone">
                 Phone
                 <input type="text" name="phone" required></input>
               </label>
             </div>
 
             <div>
-              <label htmlFor="over25">
+              <label className="section__subtitle over25" htmlFor="over25">
                 I certify that I am over the age of 25 at the time of my trip &
                 I have a vaild drivers license
                 <input
@@ -176,14 +181,18 @@ function Booking() {
             </div>
 
             <div>
-              <label htmlFor="driversLicense">
+              <label className="section__calendar" htmlFor="driversLicense">
                 Drivers License Number
                 <input type="text" name="driversLicense" required></input>
               </label>
             </div>
 
             <div>
-              <label htmlFor="pickUpTime" required>
+              <label
+                className="section__calendar"
+                htmlFor="pickUpTime"
+                required
+              >
                 Pick-Up Time
                 <select id="pickUp" name="pickUp">
                   <option value="8am-9am">8am - 9am</option>
@@ -201,7 +210,11 @@ function Booking() {
             </div>
 
             <div>
-              <label htmlFor="dropOffTime" required>
+              <label
+                className="section__calendar"
+                htmlFor="dropOffTime"
+                required
+              >
                 Drop-off Time
                 <select id="dropOff" name="dropOff">
                   <option value="8am-9am">8am - 9am</option>
@@ -218,7 +231,7 @@ function Booking() {
               </label>
             </div>
 
-            <button>Submit</button>
+            <button className="section__calendar">Submit</button>
           </form>
         </section>
       </div>
