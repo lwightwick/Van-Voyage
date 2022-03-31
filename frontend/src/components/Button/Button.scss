@@ -4,5 +4,5 @@
 
 .button {
     @include button;
-    @include font-size($h3-font-sizes);
+    @include font-size($h4-font-sizes);
 }

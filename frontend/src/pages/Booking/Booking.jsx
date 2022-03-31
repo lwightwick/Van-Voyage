@@ -78,7 +78,7 @@ function Booking() {
             </div>
           </section>
 
-          <section className="form-section form-section--no-divider">
+          <section className="form-section form-section--no-side-divider">
             <h3 className="form-section__title">Selected Van</h3>
 
             <div className="form-section__fields-container">
@@ -130,7 +130,7 @@ function Booking() {
           </section>
         </div>
 
-        <section className="form-section form-section--no-divider personal-info">
+        <section className="form-section form-section--no-divider form-section--no-side-divider personal-info">
           <h3 className="form-section__title">Personal info</h3>
           <form className="form-section__fields-container personal-info__form">
             <div>

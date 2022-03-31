@@ -22,7 +22,7 @@
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 2rem;
     gap: 3rem;
     align-items: center;
 
@@ -64,7 +64,7 @@
         display: inline-block;
         width: 100%;
 
-        &--no-divider {
+        &--no-side-divider {
             border-right: none;
             padding-right: 0;
         }
