@@ -61,30 +61,13 @@ a {
 
 }
 
-button {
-    // background-color: $color-background-green;
-    // background-color: cornflowerblue;
-    // font-size: 1.125rem;
-    // border-radius: .25rem;
-    // border: none;
-    // width: 10rem;
-    // padding: 0.4rem 1rem;
-    // color: $color-primary-white;
-    // cursor: pointer;
-
-    // &:hover {
-    //     background-color: red;
-    //     // cursor: pointer;
-    // }
-}
-
 .wrapper {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 3rem;
 
     @include tablet {
-        // padding: 0 $tablet-padding-page-edge;
+        padding: 0 5rem;
     }
 
     @include desktop {

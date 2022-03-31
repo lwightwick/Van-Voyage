@@ -12,7 +12,6 @@
 
     padding-top: 4rem;
 
-
     &__title {
         height: 5rem;
     }
@@ -26,6 +25,11 @@
     padding: 1rem;
     gap: 3rem;
     align-items: center;
+
+    @include tablet {
+        margin-top: 2rem;
+        padding: 3rem;
+    }
 }
 
 .dates-and-cost {
@@ -35,7 +39,10 @@
     width: 100%;
 
     @include tablet {
-        display: flex;
+        flex-direction: row;
+        border-bottom: solid 1px $color-primary-black;
+        padding-bottom: 2rem;
+        gap: 1.5rem;
     }
 }
 
@@ -50,10 +57,27 @@
         border-bottom: none;
     }
 
+    @include tablet {
+        border: none;
+        border-right: solid 1px $color-primary-black;
+        padding-right: 1.5rem;
+        display: inline-block;
+        width: 100%;
+
+        &--no-divider {
+            border-right: none;
+            padding-right: 0;
+        }
+    }
+
 
     &__title {
         flex: 1;
         text-transform: capitalize;
+
+        @include tablet {
+            padding-bottom: 1.5rem;
+        }
     }
 
     &__fields-container {
@@ -61,6 +85,10 @@
         gap: 2rem;
         display: flex;
         flex-direction: column;
+
+        @include tablet {
+            gap: 1.5rem;
+        }
     }
 
     &__field {
@@ -76,4 +104,26 @@
 
 .over25 {
     font-size: smaller;
+}
+
+.personal-info {
+    @include tablet {
+        margin-left: auto;
+        margin-right: auto;
+        width: 25rem;
+
+
+
+        // display: flex;
+        // justify-content: space-evenly;
+        // border-bottom: solid 1px $color-primary-black;
+        // padding-bottom: 1.5rem;
+
+    }
+
+    &__form {
+        @include tablet {
+            // width: 50%;
+        }
+    }
 }

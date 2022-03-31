@@ -3,5 +3,6 @@
 
 
 .button {
-    @include button
+    @include button;
+    @include font-size($h3-font-sizes);
 }

@@ -78,16 +78,9 @@ function Booking() {
             </div>
           </section>
 
-          <section className="form-section">
+          <section className="form-section form-section--no-divider">
             <h3 className="form-section__title">Selected Van</h3>
 
-            {/* <div className="form-section__fields-container">
-              <h4 className="form-section__field">
-                date range in here from date picker
-              </h4>
-              <h4 className="form-section__field">number of nights calculated</h4>
-              <h4 className="form-section__field">total cost for nights</h4>
-            </div> */}
             <div className="form-section__fields-container">
               <div className="form-section__field">
                 <h4 className="form-section__label">number of nights</h4>
@@ -137,9 +130,9 @@ function Booking() {
           </section>
         </div>
 
-        <section className="form-section form-section--no-divider">
+        <section className="form-section form-section--no-divider personal-info">
           <h3 className="form-section__title">Personal info</h3>
-          <form className="form-section__fields-container">
+          <form className="form-section__fields-container personal-info__form">
             <div>
               <label className="form-section__field" htmlFor="firstName">
                 First Name
