@@ -1,9 +1,40 @@
+@use '../../styles/partials/globalStyles'as *;
+@import "../../App.scss";
+
+.van-page {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-background-ivory;
+    position: relative;
+    @extend .wrapper;
+
+    padding-top: 4rem;
+
+    &__title {
+        height: 5rem;
+    }
+}
+
+
+
 .image-slider {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-content: center;
+    // align-items: center;
+    gap: 3rem;
+    height: 30rem;
+
+
+
     &__title {}
 
     &__subtitle {}
 
-    &__slider {}
+    &__slider {
+        // max-width: 10rem;
+    }
 
 }
 

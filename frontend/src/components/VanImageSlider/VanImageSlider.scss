@@ -1,15 +1,19 @@
+@use '../../styles/partials/globalStyles'as *;
+@import "../../App.scss";
+
+
 .slider {
     position: relative;
-    height: 50rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .image {
-    width: auto;
-    height: 600px;
+    max-width: 25rem;
     border-radius: .625rem;
+    max-height: 20rem;
+    // display: block;
+    // margin-left: auto;
+    // margin-right: 50%;
+    // width: 50%;
 
 }
 

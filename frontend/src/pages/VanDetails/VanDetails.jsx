@@ -6,9 +6,9 @@ import BehindScenesImageGallery from "../../components/BehindScenesImageGallery/
 
 function VanDetails() {
   return (
-    <main>
+    <main className="van-page">
+      <h1 className="van-page__title">The Van</h1>
       <section className="image-slider">
-        <h1 className="image-slider__title">The Van</h1>
         <h2 className="image-slider__subtitle">Photo Gallery</h2>
         <VanImageSlider
           className="image-slider__slider"
