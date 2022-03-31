@@ -3,15 +3,19 @@
 
 
 .image-gallery {
-    max-width: 1350px;
-    padding: 0px 60px;
     margin: 50px auto;
     display: flex;
+    // flex-direction: column;
     flex-wrap: wrap;
-    gap: 2em;
+    gap: 1rem;
+
 
     &__images {
         cursor: pointer;
+        max-width: 12rem;
+        max-height: 12rem;
+        display: flex;
+
         // width: 8rem;
         // height: 100%;
         // gap: 3rem;
@@ -27,4 +31,6 @@
 
 img {
     cursor: pointer;
+    object-fit: cover;
+    width: 100%;
 }

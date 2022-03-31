@@ -7,11 +7,11 @@
     background-color: $color-background-ivory;
     position: relative;
     @extend .wrapper;
-
-    padding-top: 4rem;
+    // padding-top: 4rem;
+    gap: 5rem;
 
     &__title {
-        height: 5rem;
+        padding-top: 2rem;
     }
 }
 
@@ -20,9 +20,9 @@
 .image-slider {
     display: flex;
     flex-direction: column;
-    // justify-content: center;
+    justify-content: center;
     align-content: center;
-    // align-items: center;
+    align-items: center;
     gap: 3rem;
     height: 30rem;
 
@@ -30,7 +30,9 @@
 
     &__title {}
 
-    &__subtitle {}
+    &__subtitle {
+        // display: flex;
+    }
 
     &__slider {
         // max-width: 10rem;
@@ -41,15 +43,31 @@
 .virtual-tour {
     display: flex;
     flex-direction: column;
-    // justify-content: center;
+    justify-content: center;
     align-content: center;
     align-items: center;
-    padding-bottom: 5rem;
+    gap: 3rem;
+    height: 40rem;
 
     &__image {
         width: 30rem;
     }
 
-    &__subtitle {}
+    &__subtitle {
+        display: flex;
+    }
 
+}
+
+.behind-the-scenes {
+    display: flex;
+    flex-direction: column;
+    max-height: 40rem;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    &__subtitle {
+        display: flex;
+    }
 }

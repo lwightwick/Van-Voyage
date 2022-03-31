@@ -21,8 +21,8 @@ function VanDetails() {
         <img className="virtual-tour__image" src={Luna} alt="" />
       </section>
 
-      <section>
-        <h2>behind the scenes</h2>
+      <section className="behind-the-scenes">
+        <h2 className="behind-the-scenes__subtitle">behind the scenes</h2>
         <BehindScenesImageGallery />
       </section>
     </main>

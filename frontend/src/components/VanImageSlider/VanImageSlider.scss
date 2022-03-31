@@ -3,24 +3,31 @@
 
 
 .slider {
-    position: relative;
+
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .image {
     max-width: 25rem;
     border-radius: .625rem;
     max-height: 20rem;
-    // display: block;
-    // margin-left: auto;
-    // margin-right: 50%;
-    // width: 50%;
+
+}
+
+.arrows {
+    // display: flex;
+    position: absolute;
+
 
 }
 
 .right-arrow {
-    position: absolute;
-    top: 50%;
-    right: 32px;
+    margin-left: 250px;
     font-size: 3rem;
     color: rgba(0, 0, 0, 0.493);
     z-index: 10;
@@ -29,9 +36,7 @@
 }
 
 .left-arrow {
-    position: absolute;
-    top: 50%;
-    left: 32px;
+    margin-right: 250px;
     font-size: 3rem;
     color: rgba(0, 0, 0, 0.493);
     z-index: 10;
@@ -42,6 +47,7 @@
 .slide {
     opacity: 0;
     transition-duration: 1s ease;
+    display: flex;
 }
 
 .slide.active {
