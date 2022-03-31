@@ -61,16 +61,16 @@
     &:hover {
         background-color: darken($color: #FAF7F4, $amount: 10);
         cursor: pointer;
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 
     @include tablet {
-        min-width: auto;
-        width: 11rem;
-        flex-basis: auto;
+        // min-width: auto;
+        // width: 11rem;
+        // flex-basis: auto;
     }
 
     &__text {
-        flex: 2;
+        // flex: 2;
     }
 }

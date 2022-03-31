@@ -10,7 +10,7 @@ function Home() {
   return (
     <main className="home">
       <section className="banner">
-        <img className="image__banner" src={BannerImage} alt="" />
+        <img className="banner__image" src={BannerImage} alt="" />
         <h1 className="banner__title">Let's go Vanping!</h1>
         <Link className="banner__button" to="/booking">
           <Button text={"Book a Trip"} />
@@ -51,11 +51,13 @@ function Home() {
         </div>
       </section>
 
-      <section>
-        <h2>reviews</h2>
-        <p>this is a review</p>
-        <p>this is a review</p>
-        <p>this is a review</p>
+      <section className="reviews">
+        <h2 className="reviews__title">reviews</h2>
+        <div className="reviews__items">
+          <p>this is a review</p>
+          <p>this is a review</p>
+          <p>this is a review</p>
+        </div>
       </section>
     </main>
   );

@@ -4,28 +4,66 @@
 
 .home {
     // @extend .wrapper;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: rem;
+    // gap: 2rem;
+}
+
+.banner {
+    background-color: $color-background-ivory;
+    position: relative;
+    text-align: center;
+    padding: 1.5rem 0;
+
+    &__image {
+        max-width: 92%;
+        position: relative;
+        top: 0;
+        float: right;
+    }
+
+    &__title {
+        // max-width: fit-content;
+        position: absolute;
+        bottom: 320px;
+        left: 40px;
+
+
+        @include tablet {
+            top: 500px;
+            left: 80px;
+        }
+    }
+
+    &__button {
+        // max-width: fit-content;
+        position: absolute;
+        bottom: 50px;
+        right: 3rem;
+
+        @include tablet {
+            top: 560px;
+            left: 80px;
+        }
+    }
 }
 
 .image {
 
-    &__banner {
-        max-width: 100%;
-        position: relative;
-        top: 0;
-        right: 0;
-        padding-left: 1rem;
-        background-color: $color-background-ivory;
+    // &__banner {
+    //     max-width: 92%;
+    //     position: relative;
+    //     top: 0;
+    //     float: right;
 
-        @include tablet {
-            width: 100rem;
-            background-color: none;
-        }
-    }
+
+
+    // @include tablet {
+    //     width: 100rem;
+    //     background-color: none;
+    // }
+
 
     &__van-side {
         width: 20rem;
@@ -55,38 +93,18 @@
 
 
 .places_to_go {
+    width: 100%;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
 
 
     &__list {
         display: flex;
         gap: 3rem;
 
-    }
-}
-
-.banner {
-    &__title {
-        max-width: 100%;
-        position: relative;
-        bottom: 400px;
-        left: 40px;
-
-        @include tablet {
-            top: 500px;
-            left: 80px;
-        }
-    }
-
-    &__button {
-        max-width: 100%;
-        position: relative;
-        bottom: 370px;
-        left: 40px;
-
-        @include tablet {
-            top: 560px;
-            left: 80px;
-        }
     }
 }
 
@@ -104,4 +122,22 @@
         // display: flex;
     }
 
+}
+
+.reviews {
+    width: 100%;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    &__items {
+
+        display: flex;
+        flex-direction: row;
+        // gap: 3rem;
+        width: 100%;
+        justify-content: space-evenly;
+    }
 }
