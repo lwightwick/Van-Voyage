@@ -19,7 +19,7 @@ function Booking() {
   const [endDate, setEndDate] = useState(null);
   const [protectionPrice, setProtectionPrice] = useState(150);
 
-  const price = 125.25;
+  const price = 125.75;
 
   let days = NumberOfDays(startDate, endDate);
   console.log(days);
@@ -31,14 +31,14 @@ function Booking() {
       <h1 className="booking-page__title">Booking page</h1>
       <div className="booking-form">
         <div className="dates-cost">
-          <section className="date-picker">
-            <h3 className="date-picker__title">Trip Dates</h3>
+          <section className="section">
+            <h3 className="section__title">Trip Dates</h3>
 
-            <div className="date-picker__calendars">
-              <div className="date-picker__calendar">
-                <h4 className="date-picker__subtitle">Departure Date</h4>
+            <div className="section__calendars">
+              <div className="section__calendar">
+                <h4 className="section__subtitle">Departure Date</h4>
                 <DatePicker
-                  className="date-picker__start-date-picker"
+                  className="section__start-date-picker"
                   selected={startDate}
                   onChange={(date) => setStartDate(date)}
                   selectsStart
@@ -52,10 +52,10 @@ function Booking() {
                   </div>
                 </DatePicker>
               </div>
-              <div className="date-picker__calendar">
-                <h4 className="date-picker__subtitle">Return Date</h4>
+              <div className="section__calendar">
+                <h4 className="section__subtitle">Return Date</h4>
                 <DatePicker
-                  className="date-picker__end-date-picker"
+                  className="section__end-date-picker"
                   selected={endDate}
                   onChange={(date) => setEndDate(date)}
                   selectsEnd
@@ -73,37 +73,61 @@ function Booking() {
             </div>
           </section>
 
-          <section className="trip-cost">
-            <div>
-              <h3>Selected Van</h3>
-              <p>date range in here from date picker</p>
-              <p>number of nights calculated</p>
-              <p>total cost for nights</p>
-            </div>
-            <div>
-              <label htmlFor="dropOffTime" required>
-                Protection Package
-                <select
-                  id="dropOff"
-                  name="dropOff"
-                  onChange={(event) =>
-                    setProtectionPrice(Number(event.target.value))
-                  }
-                >
-                  <option value="150">Basic ($150.00)</option>
-                  <option value="250">Medium ($250.00)</option>
-                  <option value="350">Most ($350.00)</option>
-                </select>
-              </label>
-            </div>
-            <div>
-              <p>roadside assistance (required)</p>
-              <p>$30.00</p>
-            </div>
+          <section className="section">
+            <h3 className="section__title">Selected Van</h3>
 
-            <div>
-              <h3>TOTAL COST</h3>
-              <h3>$ {totalCost + 30 + protectionPrice}</h3>
+            {/* <div className="section__calendars">
+              <h4 className="section__calendar">
+                date range in here from date picker
+              </h4>
+              <h4 className="section__calendar">number of nights calculated</h4>
+              <h4 className="section__calendar">total cost for nights</h4>
+            </div> */}
+            <div className="section__calendars">
+              <div className="section__calendar">
+                <h4 className="section__subtitle">number of nights</h4>
+                <h4>{days}</h4>
+              </div>
+
+              <div className="section__calendar">
+                <h4 className="section__subtitle">van cost</h4>
+                <h4>${totalCost}</h4>
+              </div>
+
+              <div>
+                <label
+                  className="section__calendar"
+                  htmlFor="dropOffTime"
+                  required
+                >
+                  <h4 className="section__subtitle">
+                    Protection Package (required)
+                  </h4>
+                  <select
+                    id="dropOff"
+                    name="dropOff"
+                    onChange={(event) =>
+                      setProtectionPrice(Number(event.target.value))
+                    }
+                  >
+                    <option value="150">Basic ($150.75)</option>
+                    <option value="250">Medium ($250.75)</option>
+                    <option value="350">Most ($350.75)</option>
+                  </select>
+                </label>
+              </div>
+
+              <div className="section__calendar">
+                <h4 className="section__subtitle">
+                  roadside assistance (required)
+                </h4>
+                <h4>$30.00</h4>
+              </div>
+
+              <div className="section__calendar">
+                <h4 className="section__subtitle">TOTAL COST</h4>
+                <h4>${totalCost + 30 + protectionPrice}</h4>
+              </div>
             </div>
           </section>
         </div>
