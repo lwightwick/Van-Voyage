@@ -10,10 +10,7 @@ function VanDetails() {
       <h1 className="van-page__title">The Van</h1>
       <section className="image-slider">
         <h2 className="image-slider__subtitle">Photo Gallery</h2>
-        <VanImageSlider
-          className="image-slider__slider"
-          slides={VanImagesData}
-        />
+        <VanImageSlider className="image-slider" slides={VanImagesData} />
       </section>
 
       <section className="virtual-tour">

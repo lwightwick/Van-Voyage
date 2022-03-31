@@ -22,7 +22,7 @@ const VanImageSlider = ({ slides }) => {
   }
 
   return (
-    <section className="slider">
+    <div className="slider">
       <div className="arrows">
         <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
         <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
@@ -44,7 +44,7 @@ const VanImageSlider = ({ slides }) => {
           </div>
         );
       })}
-    </section>
+    </div>
   );
 };
 
