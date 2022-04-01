@@ -50,9 +50,10 @@ a {
     line-height: 1.6rem;
     text-decoration: none;
     color: $color-primary-black;
+    cursor: pointer !important;
 
     &:hover {
-        color: red;
+        color: $color-background-blue;
     }
 
     &:active {

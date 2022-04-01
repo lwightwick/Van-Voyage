@@ -1,0 +1,48 @@
+@use '../../styles/partials/globalStyles'as *;
+@import "../../App.scss";
+
+
+.image {
+
+    // &__van-side {
+    //     width: 20rem;
+    //     max-width: 100%;
+    //     position: relative;
+    //     bottom: 200px;
+    //     left: -10px;
+
+    //     @include tablet {
+    //         min-width: 28rem;
+    //         bottom: 300px;
+    //         left: 30px;
+    //     }
+    // }
+
+    &__van-front {
+        // width: 20rem;
+        // display: flex;
+        // justify-content: center;
+        // position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+}
+
+
+.the-van {
+    background-color: $color-background-blue;
+    width: 100%;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    &__title {
+        color: $color-primary-white;
+        // display: flex;
+    }
+
+}

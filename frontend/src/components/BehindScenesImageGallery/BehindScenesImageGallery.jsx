@@ -47,28 +47,31 @@ function BehindScenesImageGallery() {
   };
 
   return (
-    <div className="image-gallery">
-      {BehindTheScenesData.data.map((item, index) => (
-        <div className="image-gallery__images" key={index}>
-          <img
-            src={item.image}
-            alt={item.title}
-            onClick={() => handleClick(item, index)}
-          />
-        </div>
-      ))}
+    <section className="behind-the-scenes">
+      <h2 className="behind-the-scenes__subtitle">behind the scenes</h2>
+      <div className="image-gallery">
+        {BehindTheScenesData.data.map((item, index) => (
+          <div className="image-gallery__images" key={index}>
+            <img
+              src={item.image}
+              alt={item.title}
+              onClick={() => handleClick(item, index)}
+            />
+          </div>
+        ))}
 
-      <div>
-        {clickedImage && (
-          <ImageModal
-            clickedImage={clickedImage}
-            handleRightClick={handleRightClick}
-            setClickedImage={setClickedImage}
-            handleLeftClick={handleLeftClick}
-          />
-        )}
+        <div>
+          {clickedImage && (
+            <ImageModal
+              clickedImage={clickedImage}
+              handleRightClick={handleRightClick}
+              setClickedImage={setClickedImage}
+              handleLeftClick={handleLeftClick}
+            />
+          )}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

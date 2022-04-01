@@ -53,14 +53,21 @@
     border-radius: .25rem;
     border: none;
     padding: 0.4rem 1rem;
-    cursor: pointer;
+    // cursor: pointer;
     color: $color-background-blue;
     background-color: $color-button-ivory;
 
+    // p {
+
+
+    //     &:hover {
+
+    //     }
+    // }
 
     &:hover {
         background-color: darken($color: #FAF7F4, $amount: 10);
-        cursor: pointer;
+
         transform: scale(1.1);
     }
 

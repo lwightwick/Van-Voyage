@@ -22,29 +22,32 @@ const VanImageSlider = ({ slides }) => {
   }
 
   return (
-    <div className="slider">
-      <div className="arrows">
-        <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
-        <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+    <section className="image-slider">
+      <h2 className="image-slider__subtitle">Photo Gallery</h2>
+      <div className="slider">
+        <div className="arrows">
+          <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
+          <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+        </div>
+        {VanImagesData.map((slide, index) => {
+          return (
+            <div
+              className={index === current ? "slide active" : "slide"}
+              key={index}
+            >
+              {index === current && (
+                <img
+                  key={index}
+                  src={slide.image}
+                  alt={slide.title}
+                  className="image"
+                />
+              )}
+            </div>
+          );
+        })}
       </div>
-      {VanImagesData.map((slide, index) => {
-        return (
-          <div
-            className={index === current ? "slide active" : "slide"}
-            key={index}
-          >
-            {index === current && (
-              <img
-                key={index}
-                src={slide.image}
-                alt={slide.title}
-                className="image"
-              />
-            )}
-          </div>
-        );
-      })}
-    </div>
+    </section>
   );
 };
 

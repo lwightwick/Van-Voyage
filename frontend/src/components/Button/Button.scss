@@ -5,4 +5,5 @@
 .button {
     @include button;
     @include font-size($h4-font-sizes);
+    cursor: pointer;
 }

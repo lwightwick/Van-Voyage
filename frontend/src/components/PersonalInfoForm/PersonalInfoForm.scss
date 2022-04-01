@@ -1,0 +1,129 @@
+@use '../../styles/partials/globalStyles'as *;
+@import url('https://cdn.syncfusion.com/ej2/material.css');
+@import '../../App.scss';
+
+
+.booking-page {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-background-ivory;
+    position: relative;
+    @extend .wrapper;
+
+    padding-top: 4rem;
+
+    &__title {
+        height: 5rem;
+    }
+}
+
+.booking-form {
+    border: solid $color-primary-black 1px;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 3rem;
+    align-items: center;
+
+    @include tablet {
+        margin-top: 2rem;
+        padding: 3rem;
+    }
+}
+
+.dates-and-cost {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+
+    @include tablet {
+        flex-direction: row;
+        border-bottom: solid 1px $color-primary-black;
+        padding-bottom: 2rem;
+        gap: 1.5rem;
+    }
+}
+
+
+.form-section {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: solid 1px $color-primary-black;
+    padding-bottom: 1.5rem;
+
+    &--no-divider {
+        border-bottom: none;
+    }
+
+    @include tablet {
+        border: none;
+        border-right: solid 1px $color-primary-black;
+        padding-right: 1.5rem;
+        display: inline-block;
+        width: 100%;
+
+        &--no-side-divider {
+            border-right: none;
+            padding-right: 0;
+        }
+    }
+
+
+    &__title {
+        flex: 1;
+        text-transform: capitalize;
+
+        @include tablet {
+            padding-bottom: 1.5rem;
+        }
+    }
+
+    &__fields-container {
+        flex: 2;
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            gap: 1.5rem;
+        }
+    }
+
+    &__field {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__label {
+        display: flex;
+    }
+}
+
+.over25 {
+    font-size: smaller;
+}
+
+.personal-info {
+    @include tablet {
+        margin-left: auto;
+        margin-right: auto;
+        width: 25rem;
+
+
+
+        // display: flex;
+        // justify-content: space-evenly;
+        // border-bottom: solid 1px $color-primary-black;
+        // padding-bottom: 1.5rem;
+
+    }
+
+    &__form {
+        @include tablet {
+            // width: 50%;
+        }
+    }
+}

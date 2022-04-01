@@ -41,7 +41,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    cursor: pointer;
+    // cursor: pointer;
     // transition: all .5s ease-in-out;
 
     @include tablet {
@@ -54,7 +54,7 @@
         background: $color-primary-black;
         margin-bottom: 4px;
         border-radius: 15px;
-        cursor: pointer;
+        // cursor: pointer;
 
         @include tablet {
             display: none;
@@ -83,7 +83,7 @@
 
     &__link {
         padding: 0 2rem;
-        cursor: pointer;
+        // cursor: pointer;
         text-align: center;
         text-decoration: none;
         text-transform: capitalize;
@@ -101,7 +101,7 @@
 
         &:hover {
             color: $color-background-blue;
-            cursor: pointer;
+            // cursor: pointer;
 
         }
     }

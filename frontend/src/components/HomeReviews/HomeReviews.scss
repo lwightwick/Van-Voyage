@@ -1,0 +1,21 @@
+@use '../../styles/partials/globalStyles'as *;
+@import "../../App.scss";
+
+
+.reviews {
+    width: 100%;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    &__items {
+
+        display: flex;
+        flex-direction: row;
+        // gap: 3rem;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+}
