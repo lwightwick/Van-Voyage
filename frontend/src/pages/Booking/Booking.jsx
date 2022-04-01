@@ -12,7 +12,7 @@ function NumberOfDays(startDate, endDate) {
 
   const dateDifference = (returnDate - departureDate) / 86400000;
 
-  return dateDifference;
+  return Math.ceil(dateDifference);
 }
 
 function Booking() {
@@ -30,7 +30,7 @@ function Booking() {
     lastName: "",
     email: "",
     phone: "",
-    over25: false,
+    over25: "",
     driversLicense: "",
     pickUp: "",
     dropOff: "",
@@ -45,9 +45,10 @@ function Booking() {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
+    console.log(isSubmit);
   };
 
   useEffect(() => {
@@ -106,6 +107,7 @@ function Booking() {
                     endDate={endDate}
                     placeholderText="Select departure date"
                     monthsShown={2}
+                    minDate={new Date()}
                   >
                     <div style={{ color: "#4289DF" }}>
                       Don't forget to check the weather!
@@ -262,7 +264,7 @@ function Booking() {
                   <input
                     type="checkbox"
                     name="over25"
-                    value={formValues.over25}
+                    value={formValues.over25 ? "" : "checked"}
                     onChange={handleChange}
                   ></input>
                 </label>
