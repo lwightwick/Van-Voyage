@@ -1,0 +1,14 @@
+@use '../../styles/partials/globalStyles'as *;
+
+.virtual-tour {
+    font-family: sans-serif;
+    text-align: center;
+
+    &__image {
+        // height: 31.25rem;
+
+        @include tablet {
+            height: 50rem;
+        }
+    }
+}

@@ -1,13 +1,32 @@
 import React from "react";
-import Luna from "../../assets/Images/luna.jpg";
+import ReactDOM from "react-dom";
+import { Pannellum } from "pannellum-react";
+import myImage from "../../assets/Images/IMG_3999 2.JPG";
+import "./VirtualTour.scss";
+
+// import "./styles.css";
 
 function VirtualTour() {
   return (
-    <section className="virtual-tour">
-      <h2 className="virtual-tour__subtitle">inside brandi</h2>
-      <img className="virtual-tour__image" src={Luna} alt="" />
-    </section>
+    <div className="virtual-tour">
+      <h2>inside brandi</h2>
+      <Pannellum
+        className="virtual-tour__image"
+        width="100%"
+        height="550px"
+        image={myImage}
+        pitch={10}
+        yaw={180}
+        hfov={110}
+        autoLoad
+        showZoomCtrl={false}
+        onLoad={() => {}}
+      ></Pannellum>
+    </div>
   );
 }
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<VirtualTour />, rootElement);
 
 export default VirtualTour;
