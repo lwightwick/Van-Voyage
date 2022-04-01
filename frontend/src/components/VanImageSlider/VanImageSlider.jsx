@@ -23,7 +23,7 @@ const VanImageSlider = ({ slides }) => {
 
   return (
     <section className="image-slider">
-      <h2 className="image-slider__subtitle">Photo Gallery</h2>
+      <h2 className="image-slider__subtitle">brandi in the wild</h2>
       <div className="slider">
         <div className="arrows">
           <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />

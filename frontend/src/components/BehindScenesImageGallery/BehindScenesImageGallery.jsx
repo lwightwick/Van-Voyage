@@ -48,7 +48,7 @@ function BehindScenesImageGallery() {
 
   return (
     <section className="behind-the-scenes">
-      <h2 className="behind-the-scenes__subtitle">behind the scenes</h2>
+      <h2 className="behind-the-scenes__subtitle">brandi's creation</h2>
       <div className="image-gallery">
         {BehindTheScenesData.data.map((item, index) => (
           <div className="image-gallery__images" key={index}>
