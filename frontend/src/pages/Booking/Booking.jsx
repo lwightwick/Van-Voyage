@@ -75,9 +75,7 @@ function Booking() {
     } else if (!phoneRegex.test(values.phone)) {
       errors.phone = "This is not a valid phone number format!";
     }
-    if (values.over25 === false) {
-      console.log("validation");
-      console.log(values.over25);
+    if (!values.over25) {
       errors.over25 = "You must be over 25 to rent a van!";
     }
 
@@ -264,7 +262,7 @@ function Booking() {
                   <input
                     type="checkbox"
                     name="over25"
-                    value={!formValues.over25}
+                    value={formValues.over25}
                     onChange={handleChange}
                   ></input>
                 </label>
