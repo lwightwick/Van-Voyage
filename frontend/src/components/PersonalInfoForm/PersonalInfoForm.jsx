@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./PersonalInfoForm.scss";
 import Button from "../Button/Button";
 
-function PersonalInfoForm() {
+function PersonalInfoForm(props) {
   const initialValues = {
     firstName: "",
     lastName: "",
@@ -12,28 +12,36 @@ function PersonalInfoForm() {
     driversLicense: "",
     pickUp: "",
     dropOff: "",
+    startDate: props.startDate,
+    endDate: props.endDate,
   };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
 
-  const handleChange = (event) => {
-    setFormValues({ ...formValues, [event.target.name]: event.target.value });
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log("form submitted");
-    setFormErrors(validate(formValues));
-    setIsSubmit(true);
-    // event.target.reset();
-    setFormValues(initialValues);
-  };
-
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   setFormErrors(validate(formValues));
+  //   setIsSubmit(false);
+  //   setFormValues(initialValues);
+  // };
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
     }
   }, [formErrors]);
+
+  const handleSubmit = (event) => {
+    // event.preventDefault();
+    setFormErrors(validate(formValues));
+    setIsSubmit(false);
+    setFormValues(initialValues);
+    event.preventDefault();
+  };
+
+  const handleChange = (event) => {
+    setFormValues({ ...formValues, [event.target.name]: event.target.value });
+  };
+
   const validate = (values) => {
     const errors = {};
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -71,6 +79,14 @@ function PersonalInfoForm() {
     if (!values.dropOff) {
       errors.dropOff = "Please select a drop-off time!";
     }
+
+    if (!values.startDate) {
+      errors.startDate = "Please select a departure date above!";
+    }
+    if (!values.endDate) {
+      errors.endDate = "Please select a return date above!";
+    }
+
     return errors;
   };
 
@@ -87,7 +103,8 @@ function PersonalInfoForm() {
 
       <form
         className="form-section__fields-container personal-info__form"
-        onSubmit={handleSubmit}
+        // onSubmit={handleSubmit}
+        onSubmit={(e) => handleSubmit(formErrors && e)}
       >
         <div>
           <label className="form-section__field" htmlFor="firstName">
@@ -215,6 +232,8 @@ function PersonalInfoForm() {
           </label>
         </div>
         <p className="error-message">{formErrors.dropOff}</p>
+        <p className="error-message">{formErrors.startDate}</p>
+        <p className="error-message">{formErrors.endDate}</p>
         <Button text={"submit"} type="submit" />
       </form>
     </div>

@@ -47,6 +47,7 @@ function Booking() {
                     placeholderText="Select departure date"
                     monthsShown={2}
                     minDate={new Date()}
+                    value={startDate}
                   >
                     <div style={{ color: "#4289DF" }}>
                       Don't forget to check the weather!
@@ -59,7 +60,6 @@ function Booking() {
                 <h4 className="form-section__label">Return Date</h4>
                 <div>
                   <DatePicker
-                    // className="section__end-date-picker"
                     selected={endDate}
                     onChange={(date) => setEndDate(date)}
                     selectsEnd
@@ -68,6 +68,7 @@ function Booking() {
                     minDate={startDate}
                     placeholderText="Select return date"
                     monthsShown={2}
+                    value={endDate}
                   >
                     <div style={{ color: "#4289DF" }}>
                       Don't forget to check the weather!
@@ -132,7 +133,7 @@ function Booking() {
 
         <section className="form-section form-section--no-divider form-section--no-side-divider personal-info">
           <h3 className="form-section__title">Personal info</h3>
-          <PersonalInfoForm />
+          <PersonalInfoForm startDate={startDate} endDate={endDate} />
         </section>
       </div>
     </main>
