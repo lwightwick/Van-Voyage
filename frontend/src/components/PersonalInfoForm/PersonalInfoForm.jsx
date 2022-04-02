@@ -35,7 +35,6 @@ function PersonalInfoForm() {
     }
   }, [formErrors]);
   const validate = (values) => {
-    console.log(values);
     const errors = {};
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
@@ -72,7 +71,6 @@ function PersonalInfoForm() {
     if (!values.dropOff) {
       errors.dropOff = "Please select a drop-off time!";
     }
-    console.log(errors);
     return errors;
   };
 

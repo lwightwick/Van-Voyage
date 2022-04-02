@@ -4,7 +4,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import PersonalInfoForm from "../../components/PersonalInfoForm/PersonalInfoForm";
 
-function NumberOfDays(startDate, endDate) {
+function NumberOfNights(startDate, endDate) {
   const departureDate = new Date(startDate).getTime();
 
   const returnDate = new Date(endDate).getTime();
@@ -20,8 +20,10 @@ function Booking() {
   const [protectionPrice, setProtectionPrice] = useState(150);
 
   const price = 125.75;
-
-  let days = NumberOfDays(startDate, endDate);
+  let days = 0;
+  if (endDate) {
+    days = NumberOfNights(startDate, endDate);
+  }
   let totalCost = days * price;
 
   return (
