@@ -1,17 +1,17 @@
 @use '../../styles/partials/globalStyles'as *;
 @import "../../App.scss";
 
-.logo {
-    width: 10rem;
-
-    @include tablet {
-        width: 13rem;
-    }
-}
 
 .header {
     @extend.wrapper;
-    // position: fixed;
 
-
+    @include tablet {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        z-index: 200;
+        position: sticky;
+        top: 0;
+        background-color: $color-background-ivory;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
 }

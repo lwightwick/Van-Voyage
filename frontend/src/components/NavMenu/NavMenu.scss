@@ -11,24 +11,12 @@
 }
 
 .header {
-    padding-top: 1rem;
-
-
-    @include tablet {
-        padding-top: 2rem;
-
-    }
 
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        // position: absolute;
-        // top: 0;
-        // left: 0;
-        // right: 0;
-        // position: fixed;
 
 
         @include tablet {
@@ -109,10 +97,8 @@
 
 .logo {
     width: 10rem;
-    // padding: 1rem 0;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 1.7rem;
+
+
 
     @include tablet {
         display: flex;

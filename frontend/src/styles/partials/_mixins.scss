@@ -48,36 +48,24 @@
 }
 
 
-@mixin button {
+// @mixin button {
+//     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+//     border-radius: .25rem;
+//     border: none;
+//     padding: 0.4rem 1rem;
+//     color: $color-background-blue;
+//     background-color: $color-button-ivory;
 
-    border-radius: .25rem;
-    border: none;
-    padding: 0.4rem 1rem;
-    // cursor: pointer;
-    color: $color-background-blue;
-    background-color: $color-button-ivory;
+//     &:hover {
+//         background-color: darken($color: #FAF7F4, $amount: 10);
+//         transform: scale(1.1);
+//     }
 
-    // p {
+//     @include tablet {
+//         padding: 0.8rem 1.3rem;
+//     }
 
-
-    //     &:hover {
-
-    //     }
-    // }
-
-    &:hover {
-        background-color: darken($color: #FAF7F4, $amount: 10);
-
-        transform: scale(1.1);
-    }
-
-    @include tablet {
-        // min-width: auto;
-        // width: 11rem;
-        // flex-basis: auto;
-    }
-
-    &__text {
-        // flex: 2;
-    }
-}
+//     &__text {
+//         // flex: 2;
+//     }
+// }

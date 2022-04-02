@@ -6,7 +6,6 @@
 .banner {
     background-color: $color-background-ivory;
     position: relative;
-
     padding: 2rem 0;
     display: flex;
     flex-direction: column;
@@ -20,44 +19,35 @@
         max-width: 100%;
         max-height: 60rem;
 
+
         @include tablet {
             padding-left: 6rem;
-            // max-height: 40rem;
-            max-width: 80%;
-
+            max-width: 100%;
+            max-height: 80rem;
         }
     }
 
     &__title {
-
-
         position: absolute;
-        bottom: 320px;
-        left: 40px;
+        bottom: 75%;
+        left: 10%;
 
 
         @include tablet {
-
-            top: 150px;
-
-            left: 300px;
-            transform: translate(-50%, -50%);
+            bottom: 75%;
+            left: 10%;
         }
     }
 
     &__button {
-        // max-width: fit-content;
         position: absolute;
-        bottom: 50px;
-        right: 3rem;
+        bottom: 15%;
+        right: 8%;
 
 
         @include tablet {
-            top: 0;
-            left: 80px;
-
-            position: relative;
-            transform: translate(-50%, -50%);
+            bottom: 15%;
+            right: 8%;
         }
     }
 }

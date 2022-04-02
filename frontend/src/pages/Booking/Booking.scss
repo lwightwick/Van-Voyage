@@ -18,11 +18,11 @@
 }
 
 .booking-form {
+    @extend .wrapper;
     border: solid $color-primary-black 1px;
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
     gap: 3rem;
     align-items: center;
 

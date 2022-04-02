@@ -33,8 +33,8 @@ h3 {
 
 h4,
 label {
-    @include font-size($h4-font-sizes);
-    font-family: $h4-font;
+    @include font-size($label-font-sizes);
+    font-family: $label-font;
     color: $color-primary-black;
     text-transform: capitalize;
 }
@@ -64,14 +64,14 @@ a {
 
 .wrapper {
     max-width: 1170px;
-    margin: 0 auto;
+    margin: 0;
     padding: 0 3rem;
 
     @include tablet {
-        padding: 0 5rem;
+        padding: 2rem 4.5rem;
     }
 
     @include desktop {
-        // padding: 0 $desktop-padding-page-edge;
+        padding: 2rem 8rem;
     }
 }

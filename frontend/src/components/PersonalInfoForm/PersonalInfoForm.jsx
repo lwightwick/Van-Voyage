@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./PersonalInfoForm";
+import "./PersonalInfoForm.scss";
 import Button from "../Button/Button";
 
 function PersonalInfoForm() {

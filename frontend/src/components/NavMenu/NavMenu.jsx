@@ -7,10 +7,6 @@ import styled from "styled-components";
 const NavMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // const [style, setStyle] = useState("hamburger-rotate");
-  // const hamburgerRotate = () => {
-  //   setStyle("hamburger__rotate");
-
   return (
     <section className="header__container">
       <Link className="logo" to="/home" key="home-link">
