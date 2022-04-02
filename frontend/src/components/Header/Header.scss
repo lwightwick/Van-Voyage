@@ -3,15 +3,24 @@
 
 
 .header {
-    @extend.wrapper;
+    // @extend.wrapper;
+
+
 
     @include tablet {
+        margin: 0;
+        width: 100%;
         padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
         z-index: 200;
         position: sticky;
         top: 0;
         background-color: $color-background-ivory;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
+
+    // &__container {
+    //     padding-top: 2rem;
+    // }
+
 }

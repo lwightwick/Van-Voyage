@@ -65,13 +65,15 @@ a {
 .wrapper {
     max-width: 1170px;
     margin: 0;
-    padding: 0 3rem;
+    padding: 1rem 2rem 0 2rem;
 
     @include tablet {
-        padding: 2rem 4.5rem;
+        padding: 5rem;
+        max-width: none;
     }
 
     @include desktop {
-        padding: 2rem 8rem;
+        padding: 5rem 15rem;
+
     }
 }
