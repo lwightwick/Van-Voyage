@@ -1,6 +1,6 @@
-import "./PrimaryButton.scss";
+import "./Button.scss";
 
-function PrimaryButton(props) {
+function Button(props) {
   return (
     <button className="button" type="submit">
       {props.text}
@@ -8,4 +8,4 @@ function PrimaryButton(props) {
   );
 }
 
-export default PrimaryButton;
+export default Button;
