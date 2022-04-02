@@ -1,0 +1,39 @@
+@use '../../styles/partials/globalStyles'as *;
+@import '../../App.scss';
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    &__container {
+        max-width: 50rem;
+        // display: flex;
+        // flex-direction: column;
+    }
+
+    &__card {
+        display: flex;
+        // flex-direction: column;
+    }
+}
+
+.slideshow {
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 500px;
+}
+
+.slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+}
+
+.slide {
+    display: inline-block;
+
+    height: 400px;
+    width: 100%;
+    border-radius: 40px;
+}
