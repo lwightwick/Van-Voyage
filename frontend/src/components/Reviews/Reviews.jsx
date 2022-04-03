@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ReviewsData from "../../data/reviews.json";
+// import ReviewsData from "../../data/reviews.json";
 import "./Reviews.scss";
+import axios from "axios";
 
 function Reviews() {
+  const [reviewsData, setReviewsData] = useState([]);
+
+  useEffect(() => {
+    getReviewsData();
+  }, []);
+
+  const getReviewsData = () => {
+    axios.get(`${process.env.REACT_APP_API_URL}/reviews`).then((response) => {
+      setReviewsData(response.data);
+      return response.data[0].id;
+    });
+  };
+
   const settings = {
     dots: true,
     infinite: true,
@@ -21,7 +35,7 @@ function Reviews() {
       <h2 className="reviews__title">reviews</h2>
       <div className="slider-wrapper">
         <Slider {...settings}>
-          {ReviewsData.map((item, index) => (
+          {reviewsData.map((item, index) => (
             <div className="slick-slide" key={index}>
               <p className="slick-slide__text">{item.review}</p>
               <img

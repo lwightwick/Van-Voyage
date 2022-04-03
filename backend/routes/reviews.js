@@ -5,16 +5,16 @@ const { v4: uuidv4 } = require("uuid");
 
 // GET all review info
 router.get("", (req, res) => {
-  fs.readFile("./data/reviewss.json", "utf8", (err, data) => {
-    const reviewData = JSON.parse(data);
-    res.json(reviewData);
+  fs.readFile("./data/reviews.json", "utf8", (err, data) => {
+    const reviewsData = JSON.parse(data);
+    res.json(reviewsData);
   });
 });
 
 // CREATE new review
 router.post("/", (req, res) => {
   fs.readFile("./data/reviews.json", "utf8", (err, data) => {
-    const reviewData = JSON.parse(data);
+    const reviewsData = JSON.parse(data);
     const newReview = {
       id: uuidv4(),
       name: req.body.name,
