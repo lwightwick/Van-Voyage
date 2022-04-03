@@ -19,13 +19,7 @@ router.post("/", (req, res) => {
       id: uuidv4(),
       departure: req.body.departure,
       return: req.body.return,
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      email: req.body.email,
-      phone: req.body.phone,
-      driversLicense: req.body.driversLicense,
-      pickUpTime: req.body.pickUpTime,
-      dropOffTime: req.body.dropOffTime,
+      timestamp: req.body.timestamp,
     };
   });
 });

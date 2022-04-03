@@ -15,7 +15,7 @@ function PersonalInfoForm(props) {
     startDate: props.startDate,
     endDate: props.endDate,
   };
-  const [formValues, setFormValues] = useState(initialValues);
+  const [formValues, setFormValues] = useState({ initialValues });
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
 
