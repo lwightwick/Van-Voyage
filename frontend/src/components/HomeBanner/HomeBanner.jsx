@@ -6,8 +6,8 @@ import "./HomeBanner.scss";
 
 function Banner() {
   return (
-    <div>
-      <section className="banner">
+    <div className="banner">
+      <section className="banner__container">
         <img className="banner__image" src={BannerImage} alt="" />
         <h1 className="banner__title">Let's go Vanping!</h1>
         <Link className="banner__button" to="/booking">

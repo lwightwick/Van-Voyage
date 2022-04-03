@@ -13,6 +13,12 @@
     }
 }
 
+@mixin large-desktop {
+    @media (min-width: 1441px) {
+        @content;
+    }
+}
+
 @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
 
     @each $fs-breakpoint,
