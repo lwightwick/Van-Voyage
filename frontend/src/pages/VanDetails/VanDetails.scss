@@ -2,19 +2,30 @@
 @import "../../App.scss";
 
 .van-page {
-    @extend .wrapper;
-    display: flex;
-    flex-direction: column;
-    background-color: $color-background-ivory;
-    position: relative;
+    @include page-container;
+    // @extend .wrapper;
+    // display: flex;
+    // flex-direction: column;
+    // background-color: $color-background-ivory;
+    // position: relative;
     z-index: 100;
     padding-bottom: 5rem;
     gap: 5rem;
+
+
+    &__titles-container {
+        display: flex;
+        align-items: baseline;
+        gap: 2rem;
+        // flex-direction: row;
+    }
 
     &__title {
         // padding-top: 2rem;
 
     }
+
+
 }
 
 

@@ -3,18 +3,8 @@
 @import '../../App.scss';
 
 
-.booking-page {
-    display: flex;
-    flex-direction: column;
-    background-color: $color-background-ivory;
-    position: relative;
-    @extend .wrapper;
-
-    padding-top: 4rem;
-
-    &__title {
-        height: 5rem;
-    }
+.page-container {
+    @include page-container;
 }
 
 .booking-form {
@@ -111,19 +101,5 @@
         margin-left: auto;
         margin-right: auto;
         width: 25rem;
-
-
-
-        // display: flex;
-        // justify-content: space-evenly;
-        // border-bottom: solid 1px $color-primary-black;
-        // padding-bottom: 1.5rem;
-
-    }
-
-    &__form {
-        @include tablet {
-            // width: 50%;
-        }
     }
 }

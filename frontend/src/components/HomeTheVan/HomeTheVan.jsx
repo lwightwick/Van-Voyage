@@ -11,23 +11,13 @@ const goToTop = () => {
   });
 };
 
-// const zoomElement = document.querySelector(".zoom");
-// let zoom = 1;
-
-// const ZOOM_SPEED = 0.05;
-
-// document.addEventListener("wheel", function (e) {
-//   if (e.deltaY > 0) {
-//     zoomElement.style.transform = `scale(${(zoom += ZOOM_SPEED)})`;
-//   } else {
-//     zoomElement.style.transform = `scale(${(zoom -= ZOOM_SPEED)})`;
-//   }
-// });
-
 function HomeTheVan() {
   return (
     <section className="the-van">
+      {/* <div className="the-van__titles-container"> */}
       <h2 className="the-van__title">The Van</h2>
+      {/* <h2 className="the-van__subtitle">(Brandi)</h2> */}
+      {/* </div> */}
       <div className="the-van__link">
         <Link to="/van-details" onClick={goToTop} className="zoom">
           <img

@@ -3,12 +3,17 @@
 
 
 .image-gallery {
-    margin: 50px auto;
+    margin: 1rem auto;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
 
+    &__container {
+        @include desktop {
+            flex: 1;
+        }
+    }
 
     &__images {
         cursor: pointer;
@@ -20,7 +25,13 @@
     &__gallery {
         // min-width: 20rem;
     }
+
+    &__subtitle {
+        font-size: 2rem;
+
+    }
 }
+
 
 img {
     // cursor: pointer;
@@ -28,3 +39,34 @@ img {
     max-width: 100%;
     max-height: 20rem;
 }
+
+.behind-the-scenes {
+    &__subtitle {}
+
+    &__card {
+        margin: 50px auto;
+
+        @include desktop {
+            display: flex;
+        }
+    }
+}
+
+// .alice {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 1rem;
+//     padding-bottom: 2rem;
+//     width: 1rem;
+
+//     @include desktop {
+//         flex: 1;
+//     }
+
+//     &__subtitle {
+//         font-size: 2rem;
+
+//     }
+
+
+// }

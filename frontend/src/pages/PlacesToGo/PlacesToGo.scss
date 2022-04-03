@@ -1,0 +1,8 @@
+@use '../../styles/partials/globalStyles'as *;
+@import '../../App.scss';
+
+.page-container {
+    @include page-container;
+
+    gap: 5rem;
+}

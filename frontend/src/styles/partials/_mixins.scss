@@ -53,25 +53,16 @@
     }
 }
 
+@mixin page-container {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-background-ivory;
+    position: relative;
+    @extend .wrapper;
 
-// @mixin button {
-//     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-//     border-radius: .25rem;
-//     border: none;
-//     padding: 0.4rem 1rem;
-//     color: $color-background-blue;
-//     background-color: $color-button-ivory;
+    padding-top: 4rem;
 
-//     &:hover {
-//         background-color: darken($color: #FAF7F4, $amount: 10);
-//         transform: scale(1.1);
-//     }
-
-//     @include tablet {
-//         padding: 0.8rem 1.3rem;
-//     }
-
-//     &__text {
-//         // flex: 2;
-//     }
-// }
+    &__title {
+        height: 5rem;
+    }
+}

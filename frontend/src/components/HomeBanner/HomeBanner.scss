@@ -13,10 +13,13 @@
     @include tablet {}
 
     @include desktop {
-        padding: 0 240px;
+        padding: 1rem 10rem 3rem;
     }
 
-    &__container {}
+    &__container {
+
+        @include desktop {}
+    }
 
     &__image {
         padding-left: 2rem;
@@ -38,7 +41,7 @@
         @include desktop {
             padding-left: 5rem;
             // max-height: 100rem;
-            max-width: 95%;
+            max-width: 80%;
         }
 
         @include large-desktop {
@@ -61,7 +64,8 @@
         }
 
         @include desktop {
-            // left: 12%
+            bottom: 72%;
+            left: 11%;
             padding-left: 5rem;
         }
     }
@@ -79,7 +83,7 @@
 
         @include desktop {
             right: 18%;
-            bottom: 10%;
+            bottom: 15%;
         }
     }
 }

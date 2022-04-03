@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import BehindTheScenesData from "../../data/BehindTheScenesData.json";
 import "./BehindScenesImageGallery.scss";
 import ImageModal from "../ImageModal/ImageModal";
+import AliceBack from "../../assets/Images/alice-back-van.jpg";
 
 function BehindScenesImageGallery() {
   const [clickedImage, setClickedImage] = useState(null);
@@ -49,26 +50,30 @@ function BehindScenesImageGallery() {
   return (
     <section className="behind-the-scenes">
       <h2 className="behind-the-scenes__subtitle">brandi's creation</h2>
-      <div className="image-gallery">
-        {BehindTheScenesData.data.map((item, index) => (
-          <div className="image-gallery__images" key={index}>
-            <img
-              src={item.image}
-              alt={item.title}
-              onClick={() => handleClick(item, index)}
-            />
-          </div>
-        ))}
+      <div className="behind-the-scenes__card">
+        <div className="image-gallery__container">
+          <div className="image-gallery">
+            {BehindTheScenesData.data.map((item, index) => (
+              <div className="image-gallery__images" key={index}>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  onClick={() => handleClick(item, index)}
+                />
+              </div>
+            ))}
 
-        <div>
-          {clickedImage && (
-            <ImageModal
-              clickedImage={clickedImage}
-              handleRightClick={handleRightClick}
-              setClickedImage={setClickedImage}
-              handleLeftClick={handleLeftClick}
-            />
-          )}
+            <div>
+              {clickedImage && (
+                <ImageModal
+                  clickedImage={clickedImage}
+                  handleRightClick={handleRightClick}
+                  setClickedImage={setClickedImage}
+                  handleLeftClick={handleLeftClick}
+                />
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </section>

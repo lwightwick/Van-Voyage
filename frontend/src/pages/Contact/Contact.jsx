@@ -1,14 +1,12 @@
-import './Contact.scss';
+import "./Contact.scss";
 
-function Contact (){
-    return (
-        <div>
-        <h1>Contact page</h1>
-        </div>
-    )
+function Contact() {
+  return (
+    <main className="page-container">
+      <h1>Contact</h1>
+      <p>This page is still under construction, check back soon!</p>
+    </main>
+  );
 }
-
-
-
 
 export default Contact;
