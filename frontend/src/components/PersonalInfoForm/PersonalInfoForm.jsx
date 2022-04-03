@@ -3,6 +3,7 @@ import "./PersonalInfoForm.scss";
 import Button from "../Button/Button";
 
 function PersonalInfoForm(props) {
+  console.log(props);
   const initialValues = {
     firstName: "",
     lastName: "",
@@ -12,30 +13,27 @@ function PersonalInfoForm(props) {
     driversLicense: "",
     pickUp: "",
     dropOff: "",
-    startDate: props.startDate,
-    endDate: props.endDate,
+    // startDate: props.startDate,
+    // endDate: props.endDate,
   };
-  const [formValues, setFormValues] = useState({ initialValues });
+  const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
 
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   setFormErrors(validate(formValues));
-  //   setIsSubmit(false);
-  //   setFormValues(initialValues);
-  // };
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
     }
-  }, [formErrors]);
+  }, []);
 
   const handleSubmit = (event) => {
-    // event.preventDefault();
-    setFormErrors(validate(formValues));
+    let errors = validate(formValues);
+    setFormErrors(errors);
     setIsSubmit(false);
-    setFormValues(initialValues);
-    event.preventDefault();
+    if (Object.keys(errors).length === 0) {
+      setFormValues(initialValues);
+    } else {
+      event.preventDefault();
+    }
   };
 
   const handleChange = (event) => {
@@ -43,6 +41,7 @@ function PersonalInfoForm(props) {
   };
 
   const validate = (values) => {
+    console.log(formValues);
     const errors = {};
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
@@ -80,10 +79,10 @@ function PersonalInfoForm(props) {
       errors.dropOff = "Please select a drop-off time!";
     }
 
-    if (!values.startDate) {
+    if (!props.startDate) {
       errors.startDate = "Please select a departure date above!";
     }
-    if (!values.endDate) {
+    if (!props.endDate) {
       errors.endDate = "Please select a return date above!";
     }
 
@@ -103,8 +102,7 @@ function PersonalInfoForm(props) {
 
       <form
         className="form-section__fields-container personal-info__form"
-        // onSubmit={handleSubmit}
-        onSubmit={(e) => handleSubmit(formErrors && e)}
+        onSubmit={handleSubmit}
       >
         <div>
           <label className="form-section__field" htmlFor="firstName">
@@ -164,6 +162,8 @@ function PersonalInfoForm(props) {
               name="over25"
               value={formValues.over25 ? "" : "checked"}
               onChange={handleChange}
+
+              // value={formValues.over25}
             ></input>
           </label>
         </div>
@@ -185,10 +185,9 @@ function PersonalInfoForm(props) {
             className="form-section__field"
             htmlFor="pickUpTime"
             onChange={handleChange}
-            value={formValues.pickUp}
           >
             Pick-Up Time
-            <select id="pickUp" name="pickUp">
+            <select id="pickUp" name="pickUp" value={formValues.pickUp}>
               <option hidden value="pickUp">
                 select a pick-up time
               </option>
@@ -211,10 +210,9 @@ function PersonalInfoForm(props) {
             className="form-section__field"
             htmlFor="dropOffTime"
             onChange={handleChange}
-            value={formValues.dropOff}
           >
             Drop-off Time
-            <select id="dropOff" name="dropOff">
+            <select id="dropOff" name="dropOff" value={formValues.dropOff}>
               <option hidden value="dropOff">
                 select a drop-off time
               </option>

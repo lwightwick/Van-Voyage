@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Pannellum } from "pannellum-react";
-import myImage from "../../assets/Images/IMG_3999 2.JPG";
+import myImage from "../../assets/Images/virtual-tour.png";
 import "./VirtualTour.scss";
 
 // import "./styles.css";

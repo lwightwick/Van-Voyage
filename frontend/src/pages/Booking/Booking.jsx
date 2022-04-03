@@ -23,7 +23,8 @@ const getDatesBetweenDates = (startDate, endDate) => {
 };
 
 function Booking() {
-  const [startDate, setStartDate] = useState(new Date());
+  // const [startDate, setStartDate] = useState(new Date());
+  const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const [allBookedDates, setAllBookedDates] = useState([]);
   const [bookingsData, setBookingsData] = useState([]);
@@ -57,6 +58,10 @@ function Booking() {
     setEndDate(end);
   };
 
+  const handleSubmit = (event) => {
+    // event.preventDefault();
+  };
+
   // const [startDate, setStartDate] = useState(null);
   // const [endDate, setEndDate] = useState(null);
 
@@ -81,7 +86,8 @@ function Booking() {
                 <div>
                   <DatePicker
                     selected={startDate}
-                    onChange={(date) => setStartDate(date)}
+                    onChange={(event) => setStartDate(event.getTime())}
+                    // onChange={(event) => console.log(event.getTime())}
                     selectsStart
                     startDate={startDate}
                     endDate={endDate}
@@ -89,8 +95,8 @@ function Booking() {
                     monthsShown={2}
                     minDate={new Date()}
                     value={startDate}
-                    // disabledDates={bookingsData.map((item, index))}
                     excludeDates={listBookedDates()}
+                    // onSubmit={(event)x => handleSubmit(event)}
                   >
                     <div style={{ color: "#4289DF" }}>
                       Don't forget to check the weather!
@@ -104,7 +110,7 @@ function Booking() {
                 <div>
                   <DatePicker
                     selected={endDate}
-                    onChange={(date) => setEndDate(date)}
+                    onChange={(event) => setEndDate(event.getTime())}
                     selectsEnd
                     startDate={startDate}
                     endDate={endDate}
