@@ -3,20 +3,6 @@
 @import '../../App.scss';
 
 
-.booking-page {
-    display: flex;
-    flex-direction: column;
-    background-color: $color-background-ivory;
-    position: relative;
-    @extend .wrapper;
-
-    padding-top: 4rem;
-
-    &__title {
-        height: 5rem;
-    }
-}
-
 .booking-form {
     border: solid $color-primary-black 1px;
     border-radius: 0.5rem;

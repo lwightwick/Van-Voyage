@@ -12,9 +12,22 @@
     align-items: center;
     gap: 3rem;
 
+    &__titles-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
     &__title {
         color: $color-primary-white;
-        // display: flex;
+
+    }
+
+    &__subtitle {
+        color: $color-primary-white;
+
+        font-size: 250%;
     }
 
     &__image {

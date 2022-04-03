@@ -14,10 +14,10 @@ const goToTop = () => {
 function HomeTheVan() {
   return (
     <section className="the-van">
-      {/* <div className="the-van__titles-container"> */}
-      <h2 className="the-van__title">The Van</h2>
-      {/* <h2 className="the-van__subtitle">(Brandi)</h2> */}
-      {/* </div> */}
+      <div className="the-van__titles-container">
+        <h2 className="the-van__title">The Van</h2>
+        <h2 className="the-van__subtitle">(Brandi)</h2>
+      </div>
       <div className="the-van__link">
         <Link to="/van-details" onClick={goToTop} className="zoom">
           <img
