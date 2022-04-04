@@ -26,8 +26,6 @@ function PersonalInfoForm(props) {
   const postNewBooking = () => {
     axios
       .post(`${process.env.REACT_APP_API_URL}/bookings`, {
-        // ...formValues,
-        // id: uuidv4(),
         firstName: formValues.firstName,
         lastName: formValues.lastName,
         email: formValues.email,
@@ -60,10 +58,8 @@ function PersonalInfoForm(props) {
     setFormErrors(errors);
     setIsSubmit(false);
     if (Object.keys(errors).length === 0) {
-      // console.log(formValues);
       postNewBooking();
       setFormValues(initialValues);
-      // event.preventDefault(); /* delete once post is working */
     } else {
       event.preventDefault();
     }

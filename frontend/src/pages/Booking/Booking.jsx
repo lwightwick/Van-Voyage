@@ -23,7 +23,6 @@ const getDatesBetweenDates = (startDate, endDate) => {
 };
 
 function Booking() {
-  // const [startDate, setStartDate] = useState(new Date());
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const [allBookedDates, setAllBookedDates] = useState([]);
@@ -37,7 +36,6 @@ function Booking() {
   const getBookingsData = () => {
     axios.get(`${process.env.REACT_APP_API_URL}/bookings`).then((response) => {
       setBookingsData(response.data);
-      // return response.data[0];
       return response.data[0].id;
     });
   };
@@ -59,12 +57,9 @@ function Booking() {
     setEndDate(end);
   };
 
-  const handleSubmit = (event) => {
-    // event.preventDefault();
-  };
-
-  // const [startDate, setStartDate] = useState(null);
-  // const [endDate, setEndDate] = useState(null);
+  // const handleSubmit = (event) => {
+  // event.preventDefault();
+  // };
 
   const price = 125.75;
   let days = 0;
