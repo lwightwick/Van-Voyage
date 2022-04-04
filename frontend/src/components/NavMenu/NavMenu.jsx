@@ -4,12 +4,19 @@ import "./NavMenu.scss";
 import Logo from "../../assets/Icons/logo.svg";
 import styled from "styled-components";
 
+const goToTop = () => {
+  window.scrollTo({
+    top: 10,
+    behavior: "smooth",
+  });
+};
+
 const NavMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <section className="header__container">
-      <Link className="logo" to="/home" key="home-link">
+      <Link className="logo" to="/home" key="home-link" onClick={goToTop}>
         <img src={Logo} alt="logo" />
       </Link>
 
@@ -23,23 +30,48 @@ const NavMenu = () => {
         className="menu"
         style={{ "max-height": isOpen ? "300px" : "0" }}
       >
-        <Link className="menu__link" to="/van-details" key="van-details-link">
+        <Link
+          className="menu__link"
+          to="/van-details"
+          onClick={goToTop}
+          key="van-details-link"
+        >
           the van
         </Link>
 
-        <Link className="menu__link" to="/booking" key="booking-link">
+        <Link
+          className="menu__link"
+          to="/booking"
+          onClick={goToTop}
+          key="booking-link"
+        >
           book my Trip
         </Link>
 
-        <Link className="menu__link" to="/places-to-go" key="places-to-go-link">
+        <Link
+          className="menu__link"
+          to="/places-to-go"
+          onClick={goToTop}
+          key="places-to-go-link"
+        >
           Places to Go
         </Link>
 
-        <Link className="menu__link" to="/about" key="about-link">
+        <Link
+          className="menu__link"
+          to="/about"
+          onClick={goToTop}
+          key="about-link"
+        >
           about
         </Link>
 
-        <Link className="menu__link" to="/contact" key="contact-link">
+        <Link
+          className="menu__link"
+          to="/contact"
+          onClick={goToTop}
+          key="contact-link"
+        >
           contact
         </Link>
       </section>

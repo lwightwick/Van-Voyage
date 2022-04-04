@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import ReviewsData from "../../data/reviews.json";
 import "./Reviews.scss";
 import axios from "axios";
 
@@ -37,7 +36,10 @@ function Reviews() {
         <Slider {...settings}>
           {reviewsData.map((item, index) => (
             <div className="slick-slide" key={index}>
-              <p className="slick-slide__text">{item.review}</p>
+              <div className="slick-slide__text-container">
+                <p className="slick-slide__text">{item.review}</p>
+                <p className="slick-slide__name">~ {item.name}</p>
+              </div>
               <img
                 className="slick-slide__image"
                 src={item.image}
