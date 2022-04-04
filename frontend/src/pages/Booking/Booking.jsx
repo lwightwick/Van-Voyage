@@ -37,6 +37,7 @@ function Booking() {
   const getBookingsData = () => {
     axios.get(`${process.env.REACT_APP_API_URL}/bookings`).then((response) => {
       setBookingsData(response.data);
+      // return response.data[0];
       return response.data[0].id;
     });
   };
@@ -45,7 +46,7 @@ function Booking() {
     let bookedDates = [];
     bookingsData.map((item, index) => {
       bookedDates = bookedDates.concat(
-        ...getDatesBetweenDates(item.departure, item.return)
+        ...getDatesBetweenDates(item.startDate, item.endDate)
       );
     });
 

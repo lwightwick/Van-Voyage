@@ -1,14 +1,88 @@
 [{
-        "id": 1,
-        "departure": 1648952537000,
-        "return": 1649211737000,
-        "timestamp": 1648952537000
-    },
-    {
-        "id": 2,
-        "departure": 1650515873000,
-        "return": 1650947873000,
-        "timestamp": 1648952537000
-
-    }
-]
+    "id": 1,
+    "firstName": "lucy",
+    "lastName": "smith",
+    "email": "lucy.smith@gmail.com",
+    "phone": "6048984511",
+    "over25": "checked",
+    "driversLicense": "4545bgr4",
+    "pickUp": "",
+    "dropOff": "",
+    "startDate": 1648952537000,
+    "endDate": 1649211737000,
+    "timestamp": 1648952537000
+}, {
+    "id": 2,
+    "firstName": "alice",
+    "lastName": "samson",
+    "email": "alice@gmail.com",
+    "phone": "6048988461",
+    "over25": "checked",
+    "driversLicense": "4554vfr4",
+    "pickUp": "",
+    "dropOff": "",
+    "startDate": 1650515873000,
+    "endDate": 1650947873000,
+    "timestamp": 1648952537000
+}, {
+    "id": "9017f372-5171-4baf-8ef4-649b35d0966a"
+}, {
+    "id": "5fc1dde0-14d2-4b83-9640-506d4d480ee4"
+}, {
+    "id": "e88003e4-f61c-4d06-8b0c-739ba53fc385"
+}, {
+    "id": "0b86ae4a-ce90-44f6-986b-ccc7423bca9d"
+}, {
+    "id": "5ff0c172-a184-400c-b4f9-247d58246d03"
+}, {
+    "id": "23bbbf51-452c-444e-ace2-9ee788b64e76"
+}, {
+    "id": "13de9b40-c4ee-4bee-9fd5-a2bcfbf0e306"
+}, {
+    "id": "f3db6136-fc3b-4048-acd9-4999e7d22970"
+}, {
+    "id": "a59235cb-4024-4fb5-b5b9-4f50f0717e8e"
+}, {
+    "id": "5aa714fd-573e-4194-9fbb-e90a6f504e48",
+    "timestamp": 1649088801474
+}, {
+    "id": "a211d15d-98bc-49be-aa08-5ccbb1754c39"
+}, {
+    "id": "d6906bf7-4a2b-4f80-8903-52fd588ae22e"
+}, {
+    "id": "b9c34395-f330-43fd-b7c5-c6b21cd15b26",
+    "timestamp": 1649089141725
+}, {
+    "id": "afbe3a5a-0fb5-477e-a760-b9314a57abb9"
+}, {
+    "id": "cd771954-e4b3-42ff-b910-9c4d36570f31"
+}, {
+    "id": "fcacc803-9302-4376-bae5-1ddb8aeb0120",
+    "timestamp": 1649089861495
+}, {
+    "id": "b3d633f1-9570-4e4b-83e9-ca06fb8dbda0"
+}, {
+    "id": "9ee760d9-4560-4015-8cd8-0d93e50ce8c6",
+    "firstName": "steve",
+    "lastName": "wilson",
+    "email": "steve@gmail.com",
+    "phone": "6046884512",
+    "over25": "checked",
+    "driversLicense": "4554vfr4",
+    "pickUp": "",
+    "dropOff": "",
+    "timestamp": 1648952537000
+}, {
+    "id": "dc85d3de-8941-40a4-9738-2875535abb01",
+    "firstName": "Lucy",
+    "lastName": "Wightwick",
+    "email": "lucy@samsara-cycle.com",
+    "phone": "6049664689",
+    "over25": "checked",
+    "driversLicense": "efghrth",
+    "pickUp": "10am-11am",
+    "dropOff": "11am-12pm",
+    "startDate": 1649919600000,
+    "endDate": 1650178800000,
+    "timestamp": 1649090067202
+}]

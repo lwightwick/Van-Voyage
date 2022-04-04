@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./PersonalInfoForm.scss";
 import Button from "../Button/Button";
+import axios from "axios";
 
 function PersonalInfoForm(props) {
   console.log(props);
+
   const initialValues = {
     firstName: "",
     lastName: "",
@@ -13,12 +15,39 @@ function PersonalInfoForm(props) {
     driversLicense: "",
     pickUp: "",
     dropOff: "",
-    // startDate: props.startDate,
-    // endDate: props.endDate,
+    startDate: props.startDate,
+    endDate: props.endDate,
+    timestamp: props.timestamp,
   };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+
+  const postNewBooking = () => {
+    axios
+      .post(`${process.env.REACT_APP_API_URL}/bookings`, {
+        // ...formValues,
+        // id: uuidv4(),
+        firstName: formValues.firstName,
+        lastName: formValues.lastName,
+        email: formValues.email,
+        phone: formValues.phone,
+        over25: formValues.over25,
+        driversLicense: formValues.driversLicense,
+        pickUp: formValues.pickUp,
+        dropOff: formValues.dropOff,
+        startDate: props.startDate,
+        endDate: props.endDate,
+        timestamp: new Date().getTime(),
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        alert("failed to fetch new booking");
+      });
+    console.log(postNewBooking);
+  };
 
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
@@ -27,10 +56,14 @@ function PersonalInfoForm(props) {
 
   const handleSubmit = (event) => {
     let errors = validate(formValues);
+
     setFormErrors(errors);
     setIsSubmit(false);
     if (Object.keys(errors).length === 0) {
+      // console.log(formValues);
+      postNewBooking();
       setFormValues(initialValues);
+      // event.preventDefault(); /* delete once post is working */
     } else {
       event.preventDefault();
     }
@@ -41,7 +74,6 @@ function PersonalInfoForm(props) {
   };
 
   const validate = (values) => {
-    console.log(formValues);
     const errors = {};
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
@@ -85,7 +117,6 @@ function PersonalInfoForm(props) {
     if (!props.endDate) {
       errors.endDate = "Please select a return date above!";
     }
-
     return errors;
   };
 

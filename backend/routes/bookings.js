@@ -17,8 +17,16 @@ router.post("/", (req, res) => {
     const bookingData = JSON.parse(data);
     const newBooking = {
       id: uuidv4(),
-      departure: req.body.departure,
-      return: req.body.return,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      phone: req.body.phone,
+      over25: req.body.over25,
+      driversLicense: req.body.driversLicense,
+      pickUp: req.body.pickUp,
+      dropOff: req.body.dropOff,
+      startDate: req.body.startDate,
+      endDate: req.body.endDate,
       timestamp: req.body.timestamp,
     };
     bookingData.push(newBooking);
