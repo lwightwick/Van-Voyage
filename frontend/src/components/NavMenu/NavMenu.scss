@@ -99,8 +99,13 @@
 
         &:hover {
             color: $color-background-blue;
-            // cursor: pointer;
+        }
 
+        &:focus {
+            background-color: $color-background-blue;
+            color: $color-background-ivory;
+            padding: 0 .5rem;
+            border-radius: 1rem;
         }
     }
 }
