@@ -3,7 +3,7 @@
         "name": "Han",
         "image": "https://van-voyage-public.s3.us-west-2.amazonaws.com/images/van-images/han.jpg",
         "imageTitle": "Han in the van",
-        "review": "'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida sit amet velit in hendrerit. Vivamus iaculis lacus sit amet ipsum co'"
+        "review": "'Super cute van with everything that we needed for a prefect getaway from the city.'"
     },
     {
         "id": 2,
@@ -14,9 +14,9 @@
     },
     {
         "id": 3,
-        "name": "Han",
-        "image": "https://van-voyage-public.s3.us-west-2.amazonaws.com/images/van-images/van-views.jpg",
+        "name": "Steve",
+        "image": "https://van-voyage-public.s3.us-west-2.amazonaws.com/images/van-images/van2.jpg",
         "imageTitle": "Han in the van",
-        "review": " 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida sit amet velit in hendrerit. Vivamus iaculis lacus sit amet ipsum convallis sodales. Nunc faucibus magna sodales efficitur mollis. Nunc vestibulum quam nibh, qu'"
+        "review": " 'We loved our trip in Brandi! We were able to camp in places that aren't possible with a tent. I will definitely be renting it again!'"
     }
 ]
