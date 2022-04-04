@@ -21,6 +21,10 @@ router.post("/", (req, res) => {
       return: req.body.return,
       timestamp: req.body.timestamp,
     };
+    bookingData.push(newBooking);
+    fs.writeFile("./data/bookings.json", JSON.stringify(bookingData), () => {
+      res.json({ message: "data written to file", data: bookingData });
+    });
   });
 });
 
