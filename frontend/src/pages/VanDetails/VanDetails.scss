@@ -5,52 +5,17 @@
     @include page-container;
     z-index: 100;
     padding-bottom: 5rem;
-    gap: 3rem;
-}
-
-.image-slider {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-
-    &__title {}
-
-    &__subtitle {}
-
-    &__slider {
-        // max-width: 10rem;
-    }
-
+    gap: 2rem;
+    // align-items: center;
 }
 
-// .virtual-tour {
+// .image-slider {
 //     display: flex;
 //     flex-direction: column;
 //     justify-content: center;
 //     align-content: center;
 //     align-items: center;
-//     gap: 3rem;
-//     // height: 40rem;
 
-//     &__image {
-//         width: 30rem;
-//     }
-
-//     &__subtitle {
-//         display: flex;
-//     }
-
-// }
-
-// .behind-the-scenes {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-
-
-//     &__subtitle {
-//         display: flex;
-//     }
 // }

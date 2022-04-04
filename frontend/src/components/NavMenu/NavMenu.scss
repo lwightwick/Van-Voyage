@@ -75,8 +75,8 @@
         justify-content: right;
         flex-direction: row;
         flex-basis: 90%;
-
     }
+
 
 
     &__link {
@@ -89,24 +89,17 @@
         font-size: 0.9rem;
         z-index: 0;
 
-
-
         @include tablet {
             padding: 0;
-
-
         }
 
         &:hover {
-            color: $color-background-blue;
-        }
-
-        &:focus {
             background-color: $color-background-blue;
             color: $color-background-ivory;
             padding: 0 .5rem;
             border-radius: 1rem;
         }
+
     }
 }
 
@@ -119,4 +112,11 @@
         display: flex;
         width: 13rem;
     }
+}
+
+.clicked {
+    background-color: $color-background-blue;
+    color: $color-background-ivory;
+    padding: 0 .5rem;
+    border-radius: 1rem;
 }

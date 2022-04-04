@@ -120,29 +120,30 @@ function PersonalInfoForm(props) {
 
   return (
     <div className="container">
-      {Object.keys(formErrors).length === 0 && isSubmit && (
-        <span className="success-msg">
-          <div className="success-msg__card">
-            <h2 className="success-msg__title">
-              {" "}
-              Thanks for booking with Van Voyage!{" "}
-            </h2>
-            <p>
-              We will be in touch with you shortly via email to confirm your
-              booking.
-            </p>
-            <Link
-              classname="success-msg__button"
-              to="/home"
-              key="home-link"
-              onClick={goToTop}
-            >
-              CLOSE
-            </Link>
-          </div>
-        </span>
-      )}
-
+      <div>
+        {Object.keys(formErrors).length === 0 && isSubmit && (
+          <span className="success-msg">
+            <div className="success-msg__card">
+              <h2 className="success-msg__title">
+                {" "}
+                Thanks for booking with Van Voyage!{" "}
+              </h2>
+              <p>
+                We will be in touch with you shortly via email to confirm your
+                booking.
+              </p>
+              <Link
+                classname="success-msg__button"
+                to="/home"
+                key="home-link"
+                onClick={goToTop}
+              >
+                CLOSE
+              </Link>
+            </div>
+          </span>
+        )}
+      </div>
       <form
         className="form-section__fields-container personal-info__form"
         onSubmit={handleSubmit}

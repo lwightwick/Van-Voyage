@@ -9,7 +9,8 @@ function About() {
         <h2 className="alice__subtitle">meet alice...</h2>
         <img className="alice__image" src={AliceBack} />
         <p className="alice__text">
-          info about alice, linking to about page for more info
+          Alice is an experience, red-seal wood-worker with a love for the
+          outdoor lifestyle.
         </p>
       </div>
     </main>
