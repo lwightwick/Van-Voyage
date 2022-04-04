@@ -22,7 +22,7 @@ const VanImageSlider = ({ slides }) => {
   }
 
   return (
-    <section className="image-slider">
+    <section className="image-slider__container">
       <h2 className="image-slider__subtitle">brandi in the wild</h2>
       <div className="slider">
         <div className="arrows">

@@ -9,7 +9,7 @@ import "./VirtualTour.scss";
 function VirtualTour() {
   return (
     <div className="virtual-tour">
-      <h2>inside brandi</h2>
+      <h2 className="virtual-tour__title">inside brandi</h2>
       <Pannellum
         className="virtual-tour__image"
         width="100%"

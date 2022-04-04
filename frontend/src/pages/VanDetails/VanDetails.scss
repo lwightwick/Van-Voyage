@@ -3,31 +3,10 @@
 
 .van-page {
     @include page-container;
-    // @extend .wrapper;
-    // display: flex;
-    // flex-direction: column;
-    // background-color: $color-background-ivory;
-    // position: relative;
     z-index: 100;
     padding-bottom: 5rem;
-    gap: 5rem;
-
-
-    &__titles-container {
-        display: flex;
-        align-items: baseline;
-        gap: 2rem;
-        // flex-direction: row;
-    }
-
-    &__title {
-        // padding-top: 2rem;
-
-    }
-
-
+    gap: 3rem;
 }
-
 
 .image-slider {
     display: flex;
@@ -36,48 +15,42 @@
     align-content: center;
     align-items: center;
 
-
-
-
     &__title {}
 
-    &__subtitle {
-        // display: flex;
-    }
+    &__subtitle {}
 
     &__slider {
-        max-width: 10rem;
-        // width: 100%;
+        // max-width: 10rem;
     }
 
 }
 
-.virtual-tour {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    gap: 3rem;
-    // height: 40rem;
+// .virtual-tour {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-content: center;
+//     align-items: center;
+//     gap: 3rem;
+//     // height: 40rem;
 
-    &__image {
-        width: 30rem;
-    }
+//     &__image {
+//         width: 30rem;
+//     }
 
-    &__subtitle {
-        display: flex;
-    }
+//     &__subtitle {
+//         display: flex;
+//     }
 
-}
+// }
 
-.behind-the-scenes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+// .behind-the-scenes {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
 
 
-    &__subtitle {
-        display: flex;
-    }
-}
+//     &__subtitle {
+//         display: flex;
+//     }
+// }
