@@ -57,10 +57,6 @@ function Booking() {
     setEndDate(end);
   };
 
-  // const handleSubmit = (event) => {
-  // event.preventDefault();
-  // };
-
   const price = 125.75;
   let days = 0;
   if (endDate) {

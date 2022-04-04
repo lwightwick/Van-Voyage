@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./PersonalInfoForm.scss";
 import Button from "../Button/Button";
 import axios from "axios";
 
 function PersonalInfoForm(props) {
   console.log(props);
+
+  const goToTop = () => {
+    window.scrollTo({
+      top: 10,
+      behavior: "smooth",
+    });
+  };
 
   const initialValues = {
     firstName: "",
@@ -22,8 +30,9 @@ function PersonalInfoForm(props) {
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+  // const [success, setSuccess] = useState({});
 
-  const postNewBooking = () => {
+  const postNewBooking = (event) => {
     axios
       .post(`${process.env.REACT_APP_API_URL}/bookings`, {
         firstName: formValues.firstName,
@@ -39,30 +48,23 @@ function PersonalInfoForm(props) {
         timestamp: new Date().getTime(),
       })
       .then((res) => {
-        console.log(res);
+        setIsSubmit(true);
       })
       .catch((err) => {
         alert("failed to fetch new booking");
       });
-    console.log(postNewBooking);
   };
-
-  useEffect(() => {
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-    }
-  }, []);
 
   const handleSubmit = (event) => {
     let errors = validate(formValues);
-
     setFormErrors(errors);
     setIsSubmit(false);
+
     if (Object.keys(errors).length === 0) {
-      postNewBooking();
+      postNewBooking(event);
       setFormValues(initialValues);
-    } else {
-      event.preventDefault();
     }
+    event.preventDefault();
   };
 
   const handleChange = (event) => {
@@ -118,13 +120,27 @@ function PersonalInfoForm(props) {
 
   return (
     <div className="container">
-      {Object.keys(formErrors).length === 0 && isSubmit ? (
-        <div className="success-message">
-          Thank you for submitting your booking! We will be in touch via email
-          shortly with next steps.
-        </div>
-      ) : (
-        <pre>{}</pre>
+      {Object.keys(formErrors).length === 0 && isSubmit && (
+        <span className="success-msg">
+          <div className="success-msg__card">
+            <h2 className="success-msg__title">
+              {" "}
+              Thanks for booking with Van Voyage!{" "}
+            </h2>
+            <p>
+              We will be in touch with you shortly via email to confirm your
+              booking.
+            </p>
+            <Link
+              classname="success-msg__button"
+              to="/home"
+              key="home-link"
+              onClick={goToTop}
+            >
+              CLOSE
+            </Link>
+          </div>
+        </span>
       )}
 
       <form
@@ -259,7 +275,7 @@ function PersonalInfoForm(props) {
         <p className="error-message">{formErrors.dropOff}</p>
         <p className="error-message">{formErrors.startDate}</p>
         <p className="error-message">{formErrors.endDate}</p>
-        <Button text={"submit"} type="submit" />
+        <Button text={"submit"} type="submit" onClick={goToTop} />
       </form>
     </div>
   );

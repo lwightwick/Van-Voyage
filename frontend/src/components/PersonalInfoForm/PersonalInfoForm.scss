@@ -110,3 +110,49 @@
     text-align: right;
     font-size: 0.8rem;
 }
+
+.success-msg {
+
+    // display: block;
+    // margin-left: auto;
+    // margin-right: auto;
+
+    position: absolute;
+    // top: 50%;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+
+    &__card {
+        font-size: 1rem;
+        background-color: $color-background-ivory;
+        padding: 1.5rem 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        text-align: center;
+        width: 20rem;
+
+        @include tablet {
+            padding: 1.5rem 1.5rem;
+            width: 30rem;
+        }
+    }
+
+    &__title {
+        font-size: 180%;
+    }
+
+    a {
+        color: $color-background-blue;
+        font-weight: bolder;
+    }
+
+}
