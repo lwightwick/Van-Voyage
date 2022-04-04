@@ -10,10 +10,32 @@
     align-items: center;
     gap: 3rem;
 
-
-    &__list {
+    &__container {
         display: flex;
+        flex-direction: row;
         gap: 3rem;
 
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: space-evenly;
+        justify-content: center;
+        align-items: center;
+        max-width: 15rem;
+        background-color: $color-background-ivory;
+        padding: 2.5rem 3rem;
+        border-radius: 0.5rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    &__subtitle {
+        font-size: 150%;
+    }
+
+    &__image {
+        border-radius: 0.5rem;
     }
 }

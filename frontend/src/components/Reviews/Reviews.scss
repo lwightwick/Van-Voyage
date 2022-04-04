@@ -2,7 +2,6 @@
 @import '../../App.scss';
 
 .reviews {
-
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -29,15 +28,12 @@
 
 .slide {
     display: inline-block;
-
-    min-height: 400px;
-    // width: 100%;
+    // min-height: 20rem;
     border-radius: 40px;
 }
 
 .slider-wrapper {
-
-    max-width: 75%;
+    max-width: 70%;
     margin: 0;
 
     @include tablet {
@@ -47,26 +43,20 @@
     @include desktop {
         width: 50%;
     }
-
-
 }
-
-.slick-slider {}
-
 
 .slick-slide {
     text-align: center;
     display: flex;
-    justify-content: center !important;
-    padding-bottom: 2rem;
+    justify-content: center;
 
-    &:focus {
-        outline: none;
-    }
+    // &:focus {
+    //     outline: none;
+    // }
 
     &__text {
         text-align: center;
-        padding: 1.5rem 0;
+        padding: 1rem 0;
 
         @include desktop {
             padding: 3rem 4rem 1.5rem;
@@ -89,11 +79,10 @@
 
     &__image {
         display: flex;
-        margin-left: 28%;
+        margin-left: 20%;
         margin-right: 0;
-        max-width: 45%;
-        height: auto;
-        border-radius: 8px;
+        max-width: 56%;
+        border-radius: 0.5rem;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
         @include tablet {
@@ -111,7 +100,7 @@
 
 
 .slick-track {
-    gap: 3rem;
+    // gap: 3rem;
 }
 
 .slick-list {

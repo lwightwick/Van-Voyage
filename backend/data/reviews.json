@@ -3,13 +3,13 @@
         "name": "Han",
         "image": "https://van-voyage-public.s3.us-west-2.amazonaws.com/images/van-images/han.jpg",
         "imageTitle": "Han in the van",
-        "review": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida sit amet velit in hendrerit. Vivamus iaculis lacus sit amet ipsum convallis sodales. Nunc faucibus magna sodales efficitur mollis. Nunc vestibulum quam nibh, qu"
+        "review": "'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida sit amet velit in hendrerit. Vivamus iaculis lacus sit amet ipsum co'"
     },
     {
         "id": 2,
         "name": "Meg",
         "image": "https://van-voyage-public.s3.us-west-2.amazonaws.com/images/van-images/van-views.jpg",
-        "imageTitle": "Lucy in the van",
+        "imageTitle": "Meg in the van",
         "review": " 'Such a cool van! Beautifully revamped with cute features and a comfy bed. We took the van to Lillooet lake and had the best views. Can't wait for another adventure with Brandi!'"
     },
     {
