@@ -1,5 +1,5 @@
 @use '../../styles/partials/globalStyles'as *;
-@import "../../App.scss";
+// @import "../../App.scss";
 
 
 .image-gallery {
@@ -22,13 +22,17 @@
         display: flex;
     }
 
-    &__gallery {
-        // min-width: 20rem;
-    }
+
 
     &__subtitle {
         font-size: 2rem;
 
+    }
+
+    &__image {
+        &:hover {
+            transform: scale(2);
+        }
     }
 }
 
@@ -52,21 +56,22 @@ img {
     }
 }
 
-// .alice {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 1rem;
-//     padding-bottom: 2rem;
-//     width: 1rem;
-
-//     @include desktop {
-//         flex: 1;
-//     }
-
-//     &__subtitle {
-//         font-size: 2rem;
-
-//     }
-
-
+// .overlay {
+//     // display: flex;
+//     // margin: 50px auto;
+//     max-width: 100%;
+//     // @extend .wrapper;
+//     // z-index: 3000;
+//     margin: 0;
+//     // flex-direction: column;
 // }
+
+// .close {
+//     // @extend .wrapper;
+//     // padding: 2rem;
+//     // margin: 50px auto;
+// }
+
+.clicked-image {
+    margin: 50%;
+}

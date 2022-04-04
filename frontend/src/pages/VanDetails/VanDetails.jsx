@@ -7,7 +7,7 @@ import VirtualTour from "../../components/VirtualTour/VirtualTour";
 function VanDetails() {
   return (
     <main className="van-page">
-      <h1 className="van-page__title">brandi The Van</h1>
+      <h1 className="van-page__title">about brandi</h1>
       <VanImageSlider className="image-slider" slides={VanImagesData} />
       <VirtualTour />
       <BehindScenesImageGallery />
