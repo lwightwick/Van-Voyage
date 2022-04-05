@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./NavMenu.scss";
 import Logo from "../../assets/Icons/logo.svg";
-import styled from "styled-components";
 
 const goToTop = () => {
   window.scrollTo({
@@ -85,5 +84,3 @@ const NavMenu = () => {
 };
 
 export default NavMenu;
-
-// const Hamburger = styled.div``;

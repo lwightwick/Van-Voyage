@@ -79,7 +79,6 @@ function Booking() {
                   <DatePicker
                     selected={startDate}
                     onChange={(event) => setStartDate(event.getTime())}
-                    // onChange={(event) => console.log(event.getTime())}
                     selectsStart
                     startDate={startDate}
                     endDate={endDate}
@@ -88,7 +87,6 @@ function Booking() {
                     minDate={new Date()}
                     value={startDate}
                     excludeDates={listBookedDates()}
-                    // onSubmit={(event)x => handleSubmit(event)}
                   >
                     <div style={{ color: "#4289DF" }}>
                       Don't forget to check the weather!
@@ -165,9 +163,9 @@ function Booking() {
                 <h4>$30.00</h4>
               </div>
 
-              <div className="form-section__field">
-                <h4 className="form-section__label">TOTAL COST</h4>
-                <h4>${totalCost + 30 + protectionPrice}</h4>
+              <div className="form-section__field total">
+                <h4 className="form-section__label total">TOTAL COST</h4>
+                <h4 className="total">${totalCost + 30 + protectionPrice}</h4>
               </div>
             </div>
           </section>

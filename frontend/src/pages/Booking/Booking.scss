@@ -60,7 +60,6 @@
         }
     }
 
-
     &__title {
         flex: 1;
         text-transform: capitalize;
@@ -84,7 +83,6 @@
     &__field {
         display: flex;
         justify-content: space-between;
-
     }
 
     &__label {
@@ -102,4 +100,8 @@
         margin-right: auto;
         width: 25rem;
     }
+}
+
+.total {
+    font-weight: bold;
 }

@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./PersonalInfoForm.scss";
 import Button from "../Button/Button";
 import axios from "axios";
 
 function PersonalInfoForm(props) {
-  console.log(props);
-
   const goToTop = () => {
     window.scrollTo({
       top: 10,
@@ -30,7 +28,6 @@ function PersonalInfoForm(props) {
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
-  // const [success, setSuccess] = useState({});
 
   const postNewBooking = (event) => {
     axios
@@ -206,8 +203,6 @@ function PersonalInfoForm(props) {
               name="over25"
               value={formValues.over25 ? "" : "checked"}
               onChange={handleChange}
-
-              // value={formValues.over25}
             ></input>
           </label>
         </div>

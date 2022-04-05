@@ -56,7 +56,6 @@
         }
     }
 
-
     &__title {
         flex: 1;
         text-transform: capitalize;
@@ -97,7 +96,6 @@
         margin-left: auto;
         margin-right: auto;
         width: 25rem;
-
     }
 
     &__form {
@@ -113,7 +111,6 @@
 
 .success-msg {
     position: absolute;
-
     bottom: 10%;
     left: 50%;
     transform: translate(-50%, -50%);

@@ -1,7 +1,5 @@
 @import "../../styles/partials/globalStyles";
 
-
-
 .button {
 
     @include font-size($button-font-sizes);
@@ -19,10 +17,6 @@
 
     @include tablet {
         padding: 0.8rem 1.3rem;
-    }
-
-    &__text {
-        // flex: 2;
     }
 
     cursor: pointer;
