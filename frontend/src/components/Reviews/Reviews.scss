@@ -12,7 +12,6 @@
     @include desktop {
         padding-bottom: 3rem;
     }
-
 }
 
 .slideshow {
@@ -28,7 +27,6 @@
 
 .slide {
     display: inline-block;
-    // min-height: 20rem;
     border-radius: 40px;
 }
 
@@ -50,25 +48,18 @@
     display: flex;
     justify-content: center;
 
-    // &:focus {
-    //     outline: none;
-    // }
-
     &__text {
         text-align: center;
         padding: 1rem 0;
 
         @include desktop {
             padding: 3rem 4rem 1.5rem;
-
         }
-
     }
 
     &__text-container {
         display: flex;
         flex-direction: column;
-
     }
 
     &__name {
@@ -98,26 +89,15 @@
 
 }
 
-
-.slick-track {
-    // gap: 3rem;
-}
-
 .slick-list {
-    // padding: 0 2rem;
     display: flex;
     flex-direction: column;
-    // overflow: visible;
-    // justify-content: center;
     align-content: center;
-
     width: 40rem;
 
     @include desktop {
         width: 70rem;
     }
-
-
 }
 
 

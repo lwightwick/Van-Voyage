@@ -36,16 +36,13 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
         @include tablet {
-
             gap: 1.5rem;
             justify-content: space-evenly;
             justify-content: center;
             align-items: center;
             max-width: 15rem;
-
             padding: 2.5rem 3rem;
             border-radius: 0.5rem;
-
         }
     }
 

@@ -4,8 +4,6 @@ import { Pannellum } from "pannellum-react";
 import myImage from "../../assets/Images/virtual-tour.png";
 import "./VirtualTour.scss";
 
-// import "./styles.css";
-
 function VirtualTour() {
   return (
     <div className="virtual-tour">

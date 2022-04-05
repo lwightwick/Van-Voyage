@@ -1,14 +1,11 @@
 @use '../../styles/partials/globalStyles'as *;
-// @import "../../App.scss";
 
 .behind-the-scenes {
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-
 }
-
 
 .image-gallery {
     margin: 1rem auto;
@@ -16,7 +13,6 @@
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
-
 
     &__container {
         @include desktop {
@@ -31,19 +27,13 @@
         display: flex;
     }
 
-
-
     &__subtitle {
         font-size: 2rem;
-
-
     }
 
     &__image {
         &:hover {
             transform: scale(1.3);
-
-
 
             @include tablet {
                 transform: scale(2);
@@ -52,7 +42,6 @@
     }
 }
 
-
 img {
     object-fit: cover;
     max-width: 100%;
@@ -60,8 +49,6 @@ img {
 }
 
 .behind-the-scenes {
-    &__subtitle {}
-
     &__card {
         @include desktop {
             display: flex;
