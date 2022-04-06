@@ -12,9 +12,7 @@
 
 .header {
 
-    @include tablet {
-        // max-width: 100%;
-    }
+    @include tablet {}
 
     &__container {
         display: flex;
@@ -39,8 +37,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    // cursor: pointer;
-    // transition: all .5s ease-in-out;
 
     @include tablet {
         display: none;
@@ -52,7 +48,6 @@
         background: $color-primary-black;
         margin-bottom: 4px;
         border-radius: 15px;
-        // cursor: pointer;
 
         @include tablet {
             display: none;
@@ -68,7 +63,7 @@
     position: relative;
     flex-direction: column;
     flex-basis: 100%;
-    gap: 2rem;
+    gap: .5rem;
 
 
     @include tablet {

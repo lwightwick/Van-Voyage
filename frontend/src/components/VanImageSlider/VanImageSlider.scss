@@ -1,24 +1,28 @@
 @use '../../styles/partials/globalStyles'as *;
 @import "../../App.scss";
 
-.image-slider__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10rem;
-    padding-bottom: 10rem;
+.image-slider {
 
-    @include tablet {
-        padding-bottom: 15rem;
-        gap: 14rem;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10rem;
+        padding-bottom: 10rem;
+
+        @include tablet {
+            padding-bottom: 15rem;
+            gap: 14rem;
+        }
     }
 
-    &__subtitle {}
+    &__subtitle {
+        text-align: center;
+    }
 }
 
 .slider {
     display: flex;
-
     align-items: center;
     justify-content: center;
 }
@@ -30,12 +34,17 @@
 }
 
 .arrows {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    position: absolute;
-    cursor: pointer;
+    display: none;
 
+
+    @include tablet {
+
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        position: absolute;
+        cursor: pointer;
+    }
 
 }
 

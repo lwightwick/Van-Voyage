@@ -41,7 +41,8 @@ label {
 
 p {
     font-family: $font-stack;
-    line-height: 1.6rem;
+    line-height: .8rem;
+    @include font-size($p1-font-sizes);
 
 }
 

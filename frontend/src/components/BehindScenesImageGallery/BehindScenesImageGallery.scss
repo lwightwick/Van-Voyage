@@ -4,27 +4,44 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: .5rem;
+    padding-top: 2rem;
+
+    @include tablet {
+        gap: 2rem;
+    }
 }
 
 .image-gallery {
-    margin: 1rem auto;
+    margin: .5rem auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: .5rem;
     justify-content: center;
+
+    @include tablet {
+        gap: 1rem;
+        margin: 1rem auto;
+    }
+
 
     &__container {
         @include desktop {
             flex: 1;
+
         }
     }
 
     &__images {
         cursor: pointer;
-        max-width: 12rem;
-        max-height: 12rem;
+        max-width: 6rem;
+        max-height: 4.5rem;
         display: flex;
+
+        @include tablet {
+            max-width: 12rem;
+            max-height: 12rem;
+        }
     }
 
     &__subtitle {

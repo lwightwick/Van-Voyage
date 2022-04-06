@@ -16,8 +16,8 @@ $button-font: "Roboto";
 
 
 // font sizes
-$p1-font-sizes: (null: .9375rem,
-    320px: (.9375rem, 1.625rem),
+$p1-font-sizes: (null: .9rem,
+    320px: (.9rem, 1.625rem),
     768px: (1rem, 1.75rem),
 );
 
@@ -31,13 +31,13 @@ $p3-font-sizes: (null: .6875rem,
     768px: (.75rem, 1.125rem),
 );
 
-$h1-font-sizes: (null: 4.5rem,
-    320px: (4.5rem, 36px),
+$h1-font-sizes: (null: 3rem,
+    320px: (3rem, 36px),
     768px: (5rem, 40px),
 );
 
-$h2-font-sizes: (null: 3.5rem,
-    320px: (3.5rem, 1.75rem),
+$h2-font-sizes: (null: 2.5rem,
+    320px: (2.5rem, 1.75rem),
     768px: (4rem, 2rem),
 );
 
@@ -46,6 +46,8 @@ $h3-font-sizes: (null: 1.2rem,
     768px: (1.3rem, 1.375rem),
 );
 
+
+
 // labels
 $label-font-sizes: (null: 0.9rem,
     320px: (0.9rem, 1.25rem),
@@ -53,7 +55,7 @@ $label-font-sizes: (null: 0.9rem,
 );
 
 // buttons
-$button-font-sizes: (null: 0.9rem,
-    320px: (0.9rem, 1.25rem),
+$button-font-sizes: (null: 0.7rem,
+    320px: (0.7rem, 1.25rem),
     768px: (1.2rem, 1.375rem),
 );

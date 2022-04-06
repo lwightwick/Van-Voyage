@@ -6,8 +6,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
-    padding-top: 3rem;
+    gap: 1rem;
+    padding-top: 1.5rem;
+
+    @include tablet {
+        padding-top: 3rem;
+        gap: 3rem;
+    }
 
     @include desktop {
         padding-bottom: 3rem;
@@ -27,7 +32,7 @@
 
 .slide {
     display: inline-block;
-    border-radius: 40px;
+    border-radius: 2.5rem;
 }
 
 .slider-wrapper {
@@ -65,14 +70,18 @@
     &__name {
         margin-left: auto;
         padding-right: 4rem;
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
+
+        @include tablet {
+            margin-bottom: 3rem;
+        }
     }
 
     &__image {
         display: flex;
         margin-left: 20%;
         margin-right: 0;
-        max-width: 56%;
+        max-width: 65%;
         border-radius: 0.5rem;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 

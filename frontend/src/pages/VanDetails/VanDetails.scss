@@ -4,8 +4,13 @@
 .van-page {
     @include page-container;
     z-index: 100;
+    padding-top: 1rem;
     padding-bottom: 5rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
+
+    @include tablet {
+        gap: 2rem;
+    }
 }
