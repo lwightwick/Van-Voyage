@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const app = express();
 const cors = require("cors");
 const reviewsData = require("./routes/reviews");
@@ -20,7 +21,7 @@ app.get("/", (req, res) => {
 // routing
 app.use("/reviews", reviewsData);
 app.use("/bookings", bookingsData);
-app.use(express.static(path.join(__dirname, "./frontend/build")));
+app.use(express.static(path.resolve(__dirname, "./frontend/build")));
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
