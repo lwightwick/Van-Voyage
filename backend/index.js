@@ -23,6 +23,6 @@ app.get("/", (req, res) => {
 app.use("/reviews", reviewsData);
 app.use("/bookings", bookingsData);
 
-app.listen(PORT, () => {
+app.listen(8082, () => {
   console.log(`listening on port ${PORT}`);
 });
