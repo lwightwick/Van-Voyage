@@ -11,7 +11,7 @@ const { PORT } = process.env;
 app.use(express.json());
 app.use(express.static("public"));
 app.use(cors());
-app.use(express.static(path.resolve(__dirname, "./frontend/build")));
+app.use(express.static(path.resolve(__dirname, "../frontend/build")));
 
 // home route
 app.get("/", (req, res) => {
