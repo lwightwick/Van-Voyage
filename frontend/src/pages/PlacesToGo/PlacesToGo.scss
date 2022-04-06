@@ -1,7 +1,17 @@
 @use '../../styles/partials/globalStyles'as *;
 @import '../../App.scss';
 
-.page-container {
-    @include page-container;
-    gap: 5rem;
+.places-to-go {
+
+
+    &__page-container {
+        @include page-container;
+        gap: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+
+        @include tablet {
+            gap: 5rem;
+        }
+    }
 }

@@ -1,0 +1,16 @@
+@use '../../styles/partials/globalStyles'as *;
+@import "../../App.scss";
+
+.contact {
+
+    &__page-container {
+        @include page-container;
+        gap: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+
+        @include tablet {
+            gap: 5rem;
+        }
+    }
+}

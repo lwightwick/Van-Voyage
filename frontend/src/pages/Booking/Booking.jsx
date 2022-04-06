@@ -65,7 +65,7 @@ function Booking() {
   let totalCost = days * price;
 
   return (
-    <main className="page-container">
+    <main className="booking-page__container">
       <h1 className="booking-page__title">Booking page</h1>
       <div className="booking-form">
         <div className="dates-and-cost">

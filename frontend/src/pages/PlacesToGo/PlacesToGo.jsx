@@ -5,7 +5,7 @@ import Pender from "../../assets/Images/pender.jpg";
 
 function PlacesToGo() {
   return (
-    <main className="page-container">
+    <main className="places-to-go__page-container">
       <h1>Places To Go</h1>
       <p>This page is still under construction, check back soon!</p>
       <div className="places_to_go__container">

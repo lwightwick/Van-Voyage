@@ -3,8 +3,10 @@
 @import '../../App.scss';
 
 
-.page-container {
+.booking-page__container {
     @include page-container;
+    padding-top: 1rem;
+    gap: 2rem;
 }
 
 .booking-form {
@@ -36,12 +38,12 @@
     }
 }
 
-
 .form-section {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     border-bottom: solid 1px $color-primary-black;
     padding-bottom: 1.5rem;
+    gap: 1.5rem;
 
     &--no-divider {
         border-bottom: none;
@@ -53,6 +55,9 @@
         padding-right: 1.5rem;
         display: inline-block;
         width: 100%;
+        justify-content: space-evenly;
+        flex-direction: row;
+        gap: 0;
 
         &--no-side-divider {
             border-right: none;
@@ -81,8 +86,16 @@
     }
 
     &__field {
+
+        gap: 0.5rem;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
+
+        @include tablet {
+            gap: 0;
+            flex-direction: row;
+        }
     }
 
     &__label {
