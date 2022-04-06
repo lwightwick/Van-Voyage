@@ -11,6 +11,7 @@ const { PORT } = process.env;
 app.use(express.json());
 app.use(express.static("public"));
 app.use(cors());
+app.use(express.static(path.resolve(__dirname, "./frontend/build")));
 
 // home route
 app.get("/", (req, res) => {
@@ -21,7 +22,6 @@ app.get("/", (req, res) => {
 // routing
 app.use("/reviews", reviewsData);
 app.use("/bookings", bookingsData);
-app.use(express.static(path.resolve(__dirname, "./frontend/build")));
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
