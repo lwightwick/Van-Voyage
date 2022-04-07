@@ -43,6 +43,13 @@
     font-family: "Bebas";
     src: url('../../assets/Fonts/Bebas-Regular.otf') format("opentype");
     src: url('../../assets/Fonts/Bebas-Regular.otf') format("truetype");
-    font-style: normal;
+    src: url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap") rel("stylesheet");
     font-weight: 600;
+}
+
+@font-face {
+    font-family: "Bebas";
+    src: url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap") rel("stylesheet");
+    font-style: normal;
+    font-weight: 400;
 }
