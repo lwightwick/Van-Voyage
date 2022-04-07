@@ -9,6 +9,11 @@
     padding: 0.3rem 0.8rem;
     color: $color-background-blue;
     background-color: $color-button-ivory;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 50%;
+    flex-wrap: wrap;
 
     &:hover {
         background-color: darken($color: #FAF7F4, $amount: 10);

@@ -12,10 +12,13 @@
         padding-bottom: 3rem;
     }
 
+
     &__image {
+        height: 10rem;
 
         @include tablet {
             height: 50rem;
         }
     }
+
 }

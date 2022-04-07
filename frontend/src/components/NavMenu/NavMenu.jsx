@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./NavMenu.scss";
-import Logo from "../../assets/Icons/logo.svg";
+import Logo from "../../assets/Icons/van-voyage-logo.png";
 
 const goToTop = () => {
   window.scrollTo({

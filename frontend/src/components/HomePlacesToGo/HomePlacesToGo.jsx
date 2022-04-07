@@ -19,9 +19,6 @@ function HomePlacesToGo() {
               src={SunshineCost}
               alt="sunshine coast"
             />
-            <Link to="/places-to-go">
-              <Button text={"Find Out More"} />
-            </Link>
           </div>
           <div className="places_to_go__card">
             <h2 className="places_to_go__subtitle">Pender Island</h2>
@@ -30,9 +27,6 @@ function HomePlacesToGo() {
               src={Pender}
               alt="pender island"
             />
-            <Link to="/places-to-go">
-              <Button text={"Find Out More"} />
-            </Link>
           </div>
           <div className="places_to_go__card">
             <h2 className="places_to_go__subtitle">Lillooet</h2>
@@ -41,9 +35,6 @@ function HomePlacesToGo() {
               src={Lillooet}
               alt="Lillooet"
             />
-            <Link to="/places-to-go">
-              <Button text={"Find Out More"} />
-            </Link>
           </div>
         </div>
       </section>
