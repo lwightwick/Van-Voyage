@@ -8,9 +8,9 @@ function VanDetails() {
   return (
     <main className="van-page">
       <div className="van-page__title-container">
-        <h1 className="van-page__title">about brandi vanlisle</h1>
+        <h1 className="van-page__title">about brandi vanlile</h1>
         <p className="van-page__description">
-          (Named after Alice's favourite singer-songwriter, Brandi Carlisle)
+          (Named after Alice's favourite singer-songwriter, Brandi Carlile)
         </p>
       </div>
       <VanImageSlider slides={VanImagesData} />
