@@ -16,7 +16,7 @@ function HomeTheVan() {
     <section className="the-van">
       <div className="the-van__titles-container">
         <h2 className="the-van__title">The Van</h2>
-        <h2 className="the-van__subtitle">(Brandi Vanlisle)</h2>
+        <h2 className="the-van__subtitle">(Brandi Vanlile)</h2>
       </div>
       <div className="the-van__link-container">
         <Link
